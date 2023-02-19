@@ -1,36 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://example.org/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>熊仔家族</title>
+    <link>http://qq516249940.github.io/</link>
+    <description>Recent content on 熊仔家族</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Feb 2023 12:02:07 +0800</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Feb 2023 12:02:07 +0800</lastBuildDate><atom:link href="http://qq516249940.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My Second</title>
-      <link>http://example.org/posts/my-second/</link>
+      <title>咖啡</title>
+      <link>http://qq516249940.github.io/posts/my-second/</link>
       <pubDate>Sun, 19 Feb 2023 12:02:07 +0800</pubDate>
       
-      <guid>http://example.org/posts/my-second/</guid>
-      <description></description>
+      <guid>http://qq516249940.github.io/posts/my-second/</guid>
+      <description>第一款是星巴克的深度佛罗娜，喝了有焦味。 我的第二款咖啡豆牌子 牌子 TO. 耶加雪菲，浅度烘培，处理方法：日晒 国际咖啡评鉴师总评分 85.75
+TO精品咖啡豆 埃塞俄比亚切尔巴耶加雪菲日晒200g 原产地手冲单品 口感不错，有香气。 </description>
     </item>
     
     <item>
       <title>About</title>
-      <link>http://example.org/about/</link>
+      <link>http://qq516249940.github.io/about/</link>
       <pubDate>Sun, 19 Feb 2023 11:58:21 +0800</pubDate>
       
-      <guid>http://example.org/about/</guid>
+      <guid>http://qq516249940.github.io/about/</guid>
       <description>大家好，我是一个devops运维工程师！也是一位SRE工程师！</description>
     </item>
     
     <item>
       <title>My First Post</title>
-      <link>http://example.org/posts/my-first-post/</link>
+      <link>http://qq516249940.github.io/posts/my-first-post/</link>
       <pubDate>Sat, 18 Feb 2023 15:20:19 +0800</pubDate>
       
-      <guid>http://example.org/posts/my-first-post/</guid>
+      <guid>http://qq516249940.github.io/posts/my-first-post/</guid>
       <description>Introduction This is bold text, and this is emphasized text.
 Visit the Hugo website!</description>
     </item>
