@@ -6,7 +6,25 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Feb 2023 15:20:19 +0800</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Feb 2023 12:02:07 +0800</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Second</title>
+      <link>http://example.org/posts/my-second/</link>
+      <pubDate>Sun, 19 Feb 2023 12:02:07 +0800</pubDate>
+      
+      <guid>http://example.org/posts/my-second/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://example.org/about/</link>
+      <pubDate>Sun, 19 Feb 2023 11:58:21 +0800</pubDate>
+      
+      <guid>http://example.org/about/</guid>
+      <description>大家好，我是一个devops运维工程师！也是一位SRE工程师！</description>
+    </item>
+    
     <item>
       <title>My First Post</title>
       <link>http://example.org/posts/my-first-post/</link>
