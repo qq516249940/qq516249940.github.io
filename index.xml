@@ -1,40 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>熊仔家族</title>
     <link>http://qq516249940.github.io/</link>
-    <description>Recent content on 熊仔家族</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 19 Feb 2023 12:02:07 +0800</lastBuildDate><atom:link href="http://qq516249940.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <description>A Clean, Elegant but Advanced Hugo Theme for Hugo.</description>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 22 Feb 2023 11:44:46 &#43;0800</lastBuildDate>
+      <atom:link href="http://qq516249940.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>咖啡</title>
-      <link>http://qq516249940.github.io/posts/my-second/</link>
-      <pubDate>Sun, 19 Feb 2023 12:02:07 +0800</pubDate>
-      
-      <guid>http://qq516249940.github.io/posts/my-second/</guid>
-      <description>第一款是星巴克的深度佛罗娜，喝了有焦味。 我的第二款咖啡豆牌子 牌子 TO. 耶加雪菲，浅度烘培，处理方法：日晒 国际咖啡评鉴师总评分 85.75
-TO精品咖啡豆 埃塞俄比亚切尔巴耶加雪菲日晒200g 原产地手冲单品 口感不错，有香气。 </description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>http://qq516249940.github.io/about/</link>
-      <pubDate>Sun, 19 Feb 2023 11:58:21 +0800</pubDate>
-      
-      <guid>http://qq516249940.github.io/about/</guid>
-      <description>大家好，我是一个devops运维工程师！也是一位SRE工程师！</description>
-    </item>
-    
-    <item>
-      <title>My First Post</title>
-      <link>http://qq516249940.github.io/posts/my-first-post/</link>
-      <pubDate>Sat, 18 Feb 2023 15:20:19 +0800</pubDate>
-      
-      <guid>http://qq516249940.github.io/posts/my-first-post/</guid>
-      <description>Introduction This is bold text, and this is emphasized text.
-Visit the Hugo website!</description>
-    </item>
-    
-  </channel>
+  <title>阿里云ack容器pod总额度修改</title>
+  <link>http://qq516249940.github.io/posts/%E9%98%BF%E9%87%8C%E4%BA%91ack%E5%AE%B9%E5%99%A8pod%E6%80%BB%E9%A2%9D%E5%BA%A6%E4%BF%AE%E6%94%B9/</link>
+  <pubDate>Wed, 22 Feb 2023 11:44:46 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://qq516249940.github.io/posts/%E9%98%BF%E9%87%8C%E4%BA%91ack%E5%AE%B9%E5%99%A8pod%E6%80%BB%E9%A2%9D%E5%BA%A6%E4%BF%AE%E6%94%B9/</guid>
+  <description><![CDATA[需求 默认ack给我们每个work节点分配的容器组最大额度64,如图： 本想着尝试更改这个容器组数量
+如何修改 通过root用户登陆ack工作节点，可以通过修改节点的/etc/systemd/system/kubelet.service.d/10-kubeadm.conf中的max pod来调整。 但请注意，创建集群的时候已经定义了每个节点支持的Pod数量（64个），这个时候也一并定义了节点的PodCIDR的子网掩码大小，这部分是无法调整的。
+因此，虽然可以调整节点支持调度的pod数量，但每个节点可以给pod分配的IP是有限制的，无法修改。
+意思就是说：注意可以分配的IP是固定修改不了的，但是可以修改每个节点所支持的容器组数量，所以一般不建议修改max pod数量。
+1 2 3 4 5 6 7 8 9 10 11 12 # 阿里云ack 10-kubeadm.conf [Service] EnvironmentFile=-/etc/kubernetes/kubelet-customized-args.conf Environment=&#34;KUBELET_KUBECONFIG_ARGS=--bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf&#34; Environment=&#34;KUBELET_SYSTEM_PODS_ARGS=--max-pods 64 --pod-manifest-path=/etc/kubernetes/manifests&#34; Environment=&#34;KUBELET_NETWORK_ARGS=--network-plugin=cni --cni-conf-dir=/etc/cni/net.d --cni-bin-dir=/opt/cni/bin --v=3&#34; Environment=&#34;KUBELET_DNS_ARGS=--enable-controller-attach-detach=true --cluster-dns=192.168.0.10 --pod-infra-container-image=registry-vpc.cn-shenzhen.aliyuncs.com/acs/pause:3.2 --enable-load-reader --cluster-domain=cluster.local --cloud-provider=external --hostname-override=cn-shenzhen.172.19.201.112 --provider-id=cn-shenzhen.i-wz91n56f8y4lx2jyf5yo&#34; Environment=&#34;KUBELET_AUTHZ_ARGS=--authorization-mode=Webhook --authentication-token-webhook=true --anonymous-auth=false --client-ca-file=/etc/kubernetes/pki/ca.crt&#34; Environment=&#34;KUBELET_CGROUP_ARGS=--cgroup-driver=systemd&#34; Environment=&#34;KUBELET_CERTIFICATE_ARGS=--tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_RSA_WITH_AES_128_GCM_SHA256 --tls-cert-file=/var/lib/kubelet/pki/kubelet.crt --tls-private-key-file=/var/lib/kubelet/pki/kubelet.key --rotate-certificates=true --cert-dir=/var/lib/kubelet/pki&#34; ExecStart= ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_SYSTEM_PODS_ARGS $KUBELET_NETWORK_ARGS $KUBELET_DNS_ARGS $KUBELET_AUTHZ_ARGS $KUBELET_CGROUP_ARGS $KUBELET_CERTIFICATE_ARGS $KUBELET_EXTRA_ARGS $KUBELET_CUSTOMIZED_ARGS 1 2 3 4 5 6 7 8 9 10 11 12 13 # 原生K8S 10-kubeadm.]]></description>
+</item>
+<item>
+  <title>Pinpoint性能指标介绍</title>
+  <link>http://qq516249940.github.io/posts/pinpoint%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87%E4%BB%8B%E7%BB%8D/</link>
+  <pubDate>Wed, 22 Feb 2023 11:34:07 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://qq516249940.github.io/posts/pinpoint%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87%E4%BB%8B%E7%BB%8D/</guid>
+  <description><![CDATA[指标 Apdex-应用性能用户满意度指标。Apdex指数 ＝（1 × 满意样本 ＋ 0.5 × 容忍样本）÷ 样本总数 这样，采样结果被量化为一个0到1之间的数值即“Apdex指数”，0代表没有满意用户，1则代表所有用户都满意。 1 2 3 4 5 graph TD; A--&gt;B; A--&gt;C; B--&gt;D; C--&gt;D; ]]></description>
+</item>
+<item>
+  <title>咖啡</title>
+  <link>http://qq516249940.github.io/posts/my-second/</link>
+  <pubDate>Sun, 19 Feb 2023 12:02:07 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://qq516249940.github.io/posts/my-second/</guid>
+  <description><![CDATA[第一款是星巴克的深度佛罗娜，喝了有焦味。 我的第二款咖啡豆牌子 牌子 TO. 耶加雪菲，浅度烘培，处理方法：日晒 国际咖啡评鉴师总评分 85.75
+TO精品咖啡豆 埃塞俄比亚切尔巴耶加雪菲日晒200g 原产地手冲单品 口感不错，有香气。 ]]></description>
+</item>
+<item>
+  <title>My First Post</title>
+  <link>http://qq516249940.github.io/posts/my-first-post/</link>
+  <pubDate>Sat, 18 Feb 2023 15:20:19 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://qq516249940.github.io/posts/my-first-post/</guid>
+  <description><![CDATA[Introduction This is bold text, and this is emphasized text.
+Visit the Hugo website!]]></description>
+</item>
+</channel>
 </rss>
