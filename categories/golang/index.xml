@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>golang - Category - 熊仔家族</title>
+    <link>http://qq516249940.github.io/categories/golang/</link>
+    <description>golang - Category - 熊仔家族</description>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 01 Mar 2023 14:35:19 &#43;0800</lastBuildDate><atom:link href="http://qq516249940.github.io/categories/golang/" rel="self" type="application/rss+xml" /><item>
+  <title>Golang构建基于tag(Gopher Guides NO.1构建标签)</title>
+  <link>http://qq516249940.github.io/posts/golang%E6%9E%84%E5%BB%BA%E5%9F%BA%E4%BA%8Etag/</link>
+  <pubDate>Wed, 01 Mar 2023 14:35:19 &#43;0800</pubDate>
+  <author>chunk</author>
+  <guid>http://qq516249940.github.io/posts/golang%E6%9E%84%E5%BB%BA%E5%9F%BA%E4%BA%8Etag/</guid>
+  <description><![CDATA[123]]></description>
+</item>
+</channel>
+</rss>

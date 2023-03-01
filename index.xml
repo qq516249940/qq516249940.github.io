@@ -3,9 +3,17 @@
     <title>熊仔家族</title>
     <link>http://qq516249940.github.io/</link>
     <description>A Clean, Elegant but Advanced Hugo Theme for Hugo.</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 22 Feb 2023 11:44:46 &#43;0800</lastBuildDate>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 01 Mar 2023 14:35:19 &#43;0800</lastBuildDate>
       <atom:link href="http://qq516249940.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+  <title>Golang构建基于tag(Gopher Guides NO.1构建标签)</title>
+  <link>http://qq516249940.github.io/posts/golang%E6%9E%84%E5%BB%BA%E5%9F%BA%E4%BA%8Etag/</link>
+  <pubDate>Wed, 01 Mar 2023 14:35:19 &#43;0800</pubDate>
+  <author>chunk</author>
+  <guid>http://qq516249940.github.io/posts/golang%E6%9E%84%E5%BB%BA%E5%9F%BA%E4%BA%8Etag/</guid>
+  <description><![CDATA[123]]></description>
+</item>
+<item>
   <title>阿里云ack容器pod总额度修改</title>
   <link>http://qq516249940.github.io/posts/%E9%98%BF%E9%87%8C%E4%BA%91ack%E5%AE%B9%E5%99%A8pod%E6%80%BB%E9%A2%9D%E5%BA%A6%E4%BF%AE%E6%94%B9/</link>
   <pubDate>Wed, 22 Feb 2023 11:44:46 &#43;0800</pubDate>
