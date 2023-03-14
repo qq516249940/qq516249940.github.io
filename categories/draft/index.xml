@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>draft - Category - 熊仔家族</title>
+    <link>http://qq516249940.github.io/categories/draft/</link>
+    <description>draft - Category - 熊仔家族</description>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 08 Mar 2023 16:07:34 &#43;0800</lastBuildDate><atom:link href="http://qq516249940.github.io/categories/draft/" rel="self" type="application/rss+xml" /><item>
+  <title>一站式DevOps平台</title>
+  <link>http://qq516249940.github.io/posts/devops/%E4%B8%80%E7%AB%99%E5%BC%8Fdevops%E5%B9%B3%E5%8F%B0/</link>
+  <pubDate>Wed, 08 Mar 2023 16:07:34 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://qq516249940.github.io/posts/devops/%E4%B8%80%E7%AB%99%E5%BC%8Fdevops%E5%B9%B3%E5%8F%B0/</guid>
+  <description><![CDATA[一站式 DevOps 平台 提供标准化、自动化、服务化、数据化的 DevOps 平台，实现从需求到部署高频、顺畅、高质量的价值交付 ]]></description>
+</item>
+</channel>
+</rss>
