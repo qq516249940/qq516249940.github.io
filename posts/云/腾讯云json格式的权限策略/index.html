@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en-us">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>腾讯云JSON格式的权限策略 - 熊仔家族</title><meta name="author" content="">
+<meta name="author-link" content="">
+<meta name="description" content="单个或多个资源定义 授予单个或多个资源权限时可采用下述的六段式描述方式，每种产品都拥有其各自的资源和对应的资源定义详情。 六段式定义方式如下所示：
+1 qcs:project_id:service_type:region:account:resource 资源六段式包含以下六个字段，详细含义及示例如下：
+字段名称 含义及取值 是否必填 示例 qcs qcloud service 的简称，表示是腾讯云的云资源。 是 qcs project_id 描述项目信息，仅兼容 CAM 早期逻辑，当前策略语法禁止填写该信息，置空即可。 否 置空 service_type 描述产品简称，详细可查看 支持 CAM 的产品 中的 “CAM 中简称”。值为空时表示所有产品。 否 云服务器为 cvm内容分发网络为 cdn region 描述地域信息，地域命名方式请参考 地域列表；值为空的时候表示所有地域。 否 华北地区(北京)为 ap-beijing华南地区(广州)为 ap-guangzhou account 描述资源拥有者的主账号信息，目前支持两种方式描述资源拥有者，uin 和 uid 方式。uin 方式，即主账号的账户ID，表示为uin/${uin}。uid 方式，即主账号的 APPID，表示为uid/${appid}，仅 COS 和 CAS 业务的资源拥有者使用该方式描述。值为空的时候表示创建策略的 CAM 用户所属的主账号。 否 uin 如：uin/12345678uid 如：uid/10001234 resource 描述各产品的具体资源详情，目前支持两种方式描述资源信息，resource_type/${resourceid} 和 &lt;resource_type&gt;/&lt;resource_path&gt;。resource_type/${resourceid}：resourcetype 为资源前缀，描述资源类型，详细可查看 支持 CAM 的业务接口 中产品的资源六段式；${resourceid} 为具体的资源 ID，可前往各个产品控制台查看，值为 * 时代表该类型资源的所有资源。&lt;resource_type&gt;/&lt;resource_path&gt;：resourcetype 为资源前缀，描述资源类型；&lt;resource_path&gt; 为资源路径，该方式下，支持目录级的前缀匹配。详细可查看 支持 CAM 的业务接口 中产品的资源六段式。 是 云服务器：instance/ins-1云数据库 MySQL：instanceId/cdb-1对象存储 COS：prefix//10001234/bucket1/* 表示 bucket1 下的所有文件。COS 资源（resource）支持多种类型，详情请参见 COS 授权策略使用指引 禁止访问消息队列角色管理-指定环境 策略语法：" /><meta name="keywords" content='云' /><meta itemprop="name" content="腾讯云JSON格式的权限策略">
+<meta itemprop="description" content="单个或多个资源定义 授予单个或多个资源权限时可采用下述的六段式描述方式，每种产品都拥有其各自的资源和对应的资源定义详情。 六段式定义方式如下所示：
+1 qcs:project_id:service_type:region:account:resource 资源六段式包含以下六个字段，详细含义及示例如下：
+字段名称 含义及取值 是否必填 示例 qcs qcloud service 的简称，表示是腾讯云的云资源。 是 qcs project_id 描述项目信息，仅兼容 CAM 早期逻辑，当前策略语法禁止填写该信息，置空即可。 否 置空 service_type 描述产品简称，详细可查看 支持 CAM 的产品 中的 “CAM 中简称”。值为空时表示所有产品。 否 云服务器为 cvm内容分发网络为 cdn region 描述地域信息，地域命名方式请参考 地域列表；值为空的时候表示所有地域。 否 华北地区(北京)为 ap-beijing华南地区(广州)为 ap-guangzhou account 描述资源拥有者的主账号信息，目前支持两种方式描述资源拥有者，uin 和 uid 方式。uin 方式，即主账号的账户ID，表示为uin/${uin}。uid 方式，即主账号的 APPID，表示为uid/${appid}，仅 COS 和 CAS 业务的资源拥有者使用该方式描述。值为空的时候表示创建策略的 CAM 用户所属的主账号。 否 uin 如：uin/12345678uid 如：uid/10001234 resource 描述各产品的具体资源详情，目前支持两种方式描述资源信息，resource_type/${resourceid} 和 &lt;resource_type&gt;/&lt;resource_path&gt;。resource_type/${resourceid}：resourcetype 为资源前缀，描述资源类型，详细可查看 支持 CAM 的业务接口 中产品的资源六段式；${resourceid} 为具体的资源 ID，可前往各个产品控制台查看，值为 * 时代表该类型资源的所有资源。&lt;resource_type&gt;/&lt;resource_path&gt;：resourcetype 为资源前缀，描述资源类型；&lt;resource_path&gt; 为资源路径，该方式下，支持目录级的前缀匹配。详细可查看 支持 CAM 的业务接口 中产品的资源六段式。 是 云服务器：instance/ins-1云数据库 MySQL：instanceId/cdb-1对象存储 COS：prefix//10001234/bucket1/* 表示 bucket1 下的所有文件。COS 资源（resource）支持多种类型，详情请参见 COS 授权策略使用指引 禁止访问消息队列角色管理-指定环境 策略语法："><meta itemprop="datePublished" content="2023-03-16T14:05:41+08:00" />
+<meta itemprop="dateModified" content="2023-03-16T14:05:41+08:00" />
+<meta itemprop="wordCount" content="142">
+<meta itemprop="keywords" content="云," /><meta property="og:title" content="腾讯云JSON格式的权限策略" />
+<meta property="og:description" content="单个或多个资源定义 授予单个或多个资源权限时可采用下述的六段式描述方式，每种产品都拥有其各自的资源和对应的资源定义详情。 六段式定义方式如下所示：
+1 qcs:project_id:service_type:region:account:resource 资源六段式包含以下六个字段，详细含义及示例如下：
+字段名称 含义及取值 是否必填 示例 qcs qcloud service 的简称，表示是腾讯云的云资源。 是 qcs project_id 描述项目信息，仅兼容 CAM 早期逻辑，当前策略语法禁止填写该信息，置空即可。 否 置空 service_type 描述产品简称，详细可查看 支持 CAM 的产品 中的 “CAM 中简称”。值为空时表示所有产品。 否 云服务器为 cvm内容分发网络为 cdn region 描述地域信息，地域命名方式请参考 地域列表；值为空的时候表示所有地域。 否 华北地区(北京)为 ap-beijing华南地区(广州)为 ap-guangzhou account 描述资源拥有者的主账号信息，目前支持两种方式描述资源拥有者，uin 和 uid 方式。uin 方式，即主账号的账户ID，表示为uin/${uin}。uid 方式，即主账号的 APPID，表示为uid/${appid}，仅 COS 和 CAS 业务的资源拥有者使用该方式描述。值为空的时候表示创建策略的 CAM 用户所属的主账号。 否 uin 如：uin/12345678uid 如：uid/10001234 resource 描述各产品的具体资源详情，目前支持两种方式描述资源信息，resource_type/${resourceid} 和 &lt;resource_type&gt;/&lt;resource_path&gt;。resource_type/${resourceid}：resourcetype 为资源前缀，描述资源类型，详细可查看 支持 CAM 的业务接口 中产品的资源六段式；${resourceid} 为具体的资源 ID，可前往各个产品控制台查看，值为 * 时代表该类型资源的所有资源。&lt;resource_type&gt;/&lt;resource_path&gt;：resourcetype 为资源前缀，描述资源类型；&lt;resource_path&gt; 为资源路径，该方式下，支持目录级的前缀匹配。详细可查看 支持 CAM 的业务接口 中产品的资源六段式。 是 云服务器：instance/ins-1云数据库 MySQL：instanceId/cdb-1对象存储 COS：prefix//10001234/bucket1/* 表示 bucket1 下的所有文件。COS 资源（resource）支持多种类型，详情请参见 COS 授权策略使用指引 禁止访问消息队列角色管理-指定环境 策略语法：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://qq516249940.github.io/posts/%E4%BA%91/%E8%85%BE%E8%AE%AF%E4%BA%91json%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%9D%83%E9%99%90%E7%AD%96%E7%95%A5/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-16T14:05:41+08:00" />
+<meta property="article:modified_time" content="2023-03-16T14:05:41+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="腾讯云JSON格式的权限策略"/>
+<meta name="twitter:description" content="单个或多个资源定义 授予单个或多个资源权限时可采用下述的六段式描述方式，每种产品都拥有其各自的资源和对应的资源定义详情。 六段式定义方式如下所示：
+1 qcs:project_id:service_type:region:account:resource 资源六段式包含以下六个字段，详细含义及示例如下：
+字段名称 含义及取值 是否必填 示例 qcs qcloud service 的简称，表示是腾讯云的云资源。 是 qcs project_id 描述项目信息，仅兼容 CAM 早期逻辑，当前策略语法禁止填写该信息，置空即可。 否 置空 service_type 描述产品简称，详细可查看 支持 CAM 的产品 中的 “CAM 中简称”。值为空时表示所有产品。 否 云服务器为 cvm内容分发网络为 cdn region 描述地域信息，地域命名方式请参考 地域列表；值为空的时候表示所有地域。 否 华北地区(北京)为 ap-beijing华南地区(广州)为 ap-guangzhou account 描述资源拥有者的主账号信息，目前支持两种方式描述资源拥有者，uin 和 uid 方式。uin 方式，即主账号的账户ID，表示为uin/${uin}。uid 方式，即主账号的 APPID，表示为uid/${appid}，仅 COS 和 CAS 业务的资源拥有者使用该方式描述。值为空的时候表示创建策略的 CAM 用户所属的主账号。 否 uin 如：uin/12345678uid 如：uid/10001234 resource 描述各产品的具体资源详情，目前支持两种方式描述资源信息，resource_type/${resourceid} 和 &lt;resource_type&gt;/&lt;resource_path&gt;。resource_type/${resourceid}：resourcetype 为资源前缀，描述资源类型，详细可查看 支持 CAM 的业务接口 中产品的资源六段式；${resourceid} 为具体的资源 ID，可前往各个产品控制台查看，值为 * 时代表该类型资源的所有资源。&lt;resource_type&gt;/&lt;resource_path&gt;：resourcetype 为资源前缀，描述资源类型；&lt;resource_path&gt; 为资源路径，该方式下，支持目录级的前缀匹配。详细可查看 支持 CAM 的业务接口 中产品的资源六段式。 是 云服务器：instance/ins-1云数据库 MySQL：instanceId/cdb-1对象存储 COS：prefix//10001234/bucket1/* 表示 bucket1 下的所有文件。COS 资源（resource）支持多种类型，详情请参见 COS 授权策略使用指引 禁止访问消息队列角色管理-指定环境 策略语法："/>
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://qq516249940.github.io/posts/%E4%BA%91/%E8%85%BE%E8%AE%AF%E4%BA%91json%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%9D%83%E9%99%90%E7%AD%96%E7%95%A5/" /><link rel="prev" href="http://qq516249940.github.io/posts/devops/devops%E5%A6%82%E4%BD%95%E4%BB%8E0%E5%88%B01/" /><link rel="next" href="http://qq516249940.github.io/posts/devops/%E8%BF%90%E7%BB%B4%E5%9B%A2%E9%98%9F%E5%A6%82%E4%BD%95%E5%86%99%E5%91%A8%E6%8A%A5/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "腾讯云JSON格式的权限策略",
+    "inLanguage": "en-us",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/qq516249940.github.io\/posts\/%E4%BA%91\/%E8%85%BE%E8%AE%AF%E4%BA%91json%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%9D%83%E9%99%90%E7%AD%96%E7%95%A5\/"
+    },"genre": "posts","keywords": "云","wordcount":  142 ,
+    "url": "http:\/\/qq516249940.github.io\/posts\/%E4%BA%91\/%E8%85%BE%E8%AE%AF%E4%BA%91json%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%9D%83%E9%99%90%E7%AD%96%E7%95%A5\/","datePublished": "2023-03-16T14:05:41+08:00","dateModified": "2023-03-16T14:05:41+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "Author"
+      },"description": ""
+  }
+  </script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><script>(window.localStorage?.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('data-theme', 'dark');</script><div class="wrapper"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="熊仔家族"><img loading="lazy" src="/fixit.min.svg" srcset="/fixit.min.svg, /fixit.min.svg 1.5x, /fixit.min.svg 2x" sizes="auto" data-title="熊仔家族" data-alt="熊仔家族" class="logo" style="background: url(/svg/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;this.alt=this.dataset.alt;for(const a of ['style','data-title','data-alt','onerror','onload']){this.removeAttribute(a);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;this.alt=this.dataset.alt;for(const a of ['style','data-title','data-alt','onerror','onload']){this.removeAttribute(a);}"/><span class="header-title-text">My New Hugo FixIt Site</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/posts/"
+                title="主题文档"
+                
+              ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Posts</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/categories/"
+                title="分类"
+                
+              ><i class="fa-solid fa-th fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/tags/"
+                title="标签"
+                
+              ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="Search titles or contents ..." id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="Switch Theme">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="熊仔家族"><img loading="lazy" src="/fixit.min.svg" srcset="/fixit.min.svg, /fixit.min.svg 1.5x, /fixit.min.svg 2x" sizes="auto" data-title="/fixit.min.svg" data-alt="/fixit.min.svg" class="logo" style="background: url(/svg/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;this.alt=this.dataset.alt;for(const a of ['style','data-title','data-alt','onerror','onload']){this.removeAttribute(a);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;this.alt=this.dataset.alt;for(const a of ['style','data-title','data-alt','onerror','onload']){this.removeAttribute(a);}"/><span class="header-title-text">My New Hugo FixIt Site</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="Search titles or contents ..." id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              Cancel
+            </a>
+          </li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/posts/"
+                  title="主题文档"
+                  
+                ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Posts</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/categories/"
+                  title="分类"
+                  
+                ><i class="fa-solid fa-th fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/tags/"
+                  title="标签"
+                  
+                ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item theme-switch" title="Switch Theme">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="container" data-page-style="normal"><aside class="toc" id="toc-auto"><h2 class="toc-title">Contents&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside>
+
+  <aside class="aside-custom">
+    </aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX">
+        <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>腾讯云JSON格式的权限策略</span>
+      </h1><p class="single-subtitle animate__animated animate__fadeIn">腾讯云六段式描述方式</p></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      </span></span>
+          <span class="post-category">included in <a href="/categories/%E4%BA%91/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 云</a></span></div>
+      <div class="post-meta-line"><span title=2023-03-16&#32;14:05:41><i class="fa-regular fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-16">2023-03-16</time></span>&nbsp;<span><i class="fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i> 142 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw" aria-hidden="true"></i> One minute</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>Contents</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#单个或多个资源定义">单个或多个资源定义</a></li>
+    <li><a href="#禁止访问消息队列角色管理-指定环境">禁止访问消息队列角色管理-指定环境</a></li>
+    <li><a href="#服务级操作级和资源级">服务级、操作级和资源级</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 id="单个或多个资源定义">单个或多个资源定义</h2>
+<p>授予单个或多个资源权限时可采用下述的六段式描述方式，每种产品都拥有其各自的资源和对应的资源定义详情。
+六段式定义方式如下所示：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">qcs:project_id:service_type:region:account:resource
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>资源六段式包含以下六个字段，详细含义及示例如下：</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>含义及取值</th>
+<th>是否必填</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>qcs</td>
+<td>qcloud service 的简称，表示是腾讯云的云资源。</td>
+<td>是</td>
+<td>qcs</td>
+</tr>
+<tr>
+<td>project_id</td>
+<td>描述项目信息，仅兼容 CAM 早期逻辑，当前策略语法禁止填写该信息，置空即可。</td>
+<td>否</td>
+<td>置空</td>
+</tr>
+<tr>
+<td>service_type</td>
+<td><li>描述产品简称，详细可查看 <a href="https://cloud.tencent.com/document/product/598/10588"target="_blank" rel="external nofollow noopener noreferrer">支持 CAM 的产品</a> 中的 “CAM 中简称”。</li><li>值为空时表示所有产品。</li></td>
+<td>否</td>
+<td><li>云服务器为 cvm</li><li>内容分发网络为 cdn</li></td>
+</tr>
+<tr>
+<td>region</td>
+<td>描述地域信息，地域命名方式请参考  <a href="https://cloud.tencent.com/document/api/213/15692#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8"target="_blank" rel="external nofollow noopener noreferrer">地域列表</a>；<br/>值为空的时候表示所有地域。</td>
+<td>否</td>
+<td><li>华北地区(北京)为 ap-beijing</li><li>华南地区(广州)为 ap-guangzhou</li></td>
+</tr>
+<tr>
+<td>account</td>
+<td>描述资源拥有者的主账号信息，目前支持两种方式描述资源拥有者，uin 和 uid 方式。<li>uin 方式，即主账号的账户ID，表示为<code>uin/${uin}</code>。</li><li>uid 方式，即主账号的 APPID，表示为<code>uid/${appid}</code>，仅 COS 和 CAS 业务的资源拥有者使用该方式描述。</li>值为空的时候表示创建策略的 CAM 用户所属的主账号。</td>
+<td>否</td>
+<td><li>uin 如：uin/12345678</li><li>uid 如：uid/10001234 </li></td>
+</tr>
+<tr>
+<td>resource</td>
+<td>描述各产品的具体资源详情，目前支持两种方式描述资源信息，<code>resource_type/${resourceid}</code> 和 <code>&lt;resource_type&gt;/&lt;resource_path&gt;</code>。<li><code>resource_type/${resourceid}：resourcetype</code> 为资源前缀，描述资源类型，详细可查看 <a href="https://cloud.tencent.com/document/product/598/67350"target="_blank" rel="external nofollow noopener noreferrer">支持 CAM 的业务接口</a> 中产品的资源六段式；${resourceid} 为具体的资源 ID，可前往各个产品控制台查看，值为 <code>*</code> 时代表该类型资源的所有资源。</li><li><code>&lt;resource_type&gt;/&lt;resource_path&gt;：resourcetype</code> 为资源前缀，描述资源类型；&lt;resource_path&gt; 为资源路径，该方式下，支持目录级的前缀匹配。详细可查看 <a href="https://cloud.tencent.com/document/product/598/67350"target="_blank" rel="external nofollow noopener noreferrer">支持 CAM 的业务接口</a> 中产品的资源六段式。</li></td>
+<td>是</td>
+<td><li>云服务器：instance/ins-1</li><li>云数据库 MySQL：instanceId/cdb-1</li><li>对象存储 COS：prefix//10001234/bucket1/* 表示 bucket1 下的所有文件。COS 资源（resource）支持多种类型，详情请参见 <a href="https://cloud.tencent.com/document/product/436/31923"target="_blank" rel="external nofollow noopener noreferrer">COS 授权策略使用指引</a></li></td>
+</tr>
+</tbody>
+</table>
+<h2 id="禁止访问消息队列角色管理-指定环境">禁止访问消息队列角色管理-指定环境</h2>
+<p>策略语法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;2.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;statement&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;effect&#34;</span><span class="p">:</span> <span class="s2">&#34;deny&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;action&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;tdmq:CreateEnvironmentRole&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;tdmq:CreateRole&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;tdmq:DeleteEnvironmentRoles&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;tdmq:DeleteRoles&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;tdmq:ModifyEnvironmentRole&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;tdmq:ModifyRole&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;tdmq:DescribeEnvironmentRoles&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;tdmq:DescribeRoles&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;resource&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;qcs::tdmq::uin/1000xxxxxx584:role/pulsar-xxxxxx/*&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="服务级操作级和资源级">服务级、操作级和资源级</h2>
+<p>其中授权粒度按照粒度粗细分为服务级、操作级和资源级三个级别。</p>
+<ul>
+<li>服务级：定义对服务的整体是否拥有访问权限，分为允许对服务拥有全部操作权限或者拒绝对服务拥有全部操作权限。</li>
+<li>操作级：定义对服务的特定接口（API）是否拥有访问权限，例如：授权某账号对云服务器服务进行只读操作。</li>
+<li>资源级：定义对特定资源是否有访问权限，这是最细的授权粒度，例如：授权某账号仅读写操作某台云服务器。</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title=2023-03-16&#32;14:05:41>Updated on 2023-03-16&nbsp;</span>
+      </div></div>
+    <div class="post-info-line">
+      <div class="post-info-md"></div>
+      <div class="post-info-share">
+        <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://qq516249940.github.io/posts/%E4%BA%91/%E8%85%BE%E8%AE%AF%E4%BA%91json%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%9D%83%E9%99%90%E7%AD%96%E7%95%A5/" data-title="腾讯云JSON格式的权限策略" data-hashtags="云"><i class="fa-brands fa-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://qq516249940.github.io/posts/%E4%BA%91/%E8%85%BE%E8%AE%AF%E4%BA%91json%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%9D%83%E9%99%90%E7%AD%96%E7%95%A5/" data-hashtag="云"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://qq516249940.github.io/posts/%E4%BA%91/%E8%85%BE%E8%AE%AF%E4%BA%91json%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%9D%83%E9%99%90%E7%AD%96%E7%95%A5/" data-title="腾讯云JSON格式的权限策略"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/%E4%BA%91/' class="post-tag">云</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+    </section>
+  </div>
+
+  <div class="post-nav"><a href="/posts/devops/devops%E5%A6%82%E4%BD%95%E4%BB%8E0%E5%88%B01/" class="post-nav-item" rel="prev" title="Devops如何从0到1"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Devops如何从0到1</a>
+      <a href="/posts/devops/%E8%BF%90%E7%BB%B4%E5%9B%A2%E9%98%9F%E5%A6%82%E4%BD%95%E5%86%99%E5%91%A8%E6%8A%A5/" class="post-nav-item" rel="next" title="运维团队如何写周报">运维团队如何写周报<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.110.0">Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.2.18-RC"><img class="fixit-icon" src="/fixit.min.svg" alt="FixIt logo" />&nbsp;FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2021 - 2023</span><span class="author" itemprop="copyrightHolder">
+              <a href="/"></a></span><span class="license footer-divider"><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div><div class="footer-line statistics"></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="Back to Top"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">Theme FixIt works best with JavaScript enabled.</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","editLockTitle":"Lock editable code block","editUnLockTitle":"Unlock editable code block","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"No results found","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false}};</script><script src="/js/theme.min.js" defer></script></body>
+</html>

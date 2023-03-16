@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>云 - Tag - 熊仔家族</title>
+    <link>http://qq516249940.github.io/tags/%E4%BA%91/</link>
+    <description>云 - Tag - 熊仔家族</description>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 16 Mar 2023 14:05:41 &#43;0800</lastBuildDate><atom:link href="http://qq516249940.github.io/tags/%E4%BA%91/" rel="self" type="application/rss+xml" /><item>
+  <title>腾讯云JSON格式的权限策略</title>
+  <link>http://qq516249940.github.io/posts/%E4%BA%91/%E8%85%BE%E8%AE%AF%E4%BA%91json%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%9D%83%E9%99%90%E7%AD%96%E7%95%A5/</link>
+  <pubDate>Thu, 16 Mar 2023 14:05:41 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://qq516249940.github.io/posts/%E4%BA%91/%E8%85%BE%E8%AE%AF%E4%BA%91json%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%9D%83%E9%99%90%E7%AD%96%E7%95%A5/</guid>
+  <description><![CDATA[单个或多个资源定义 授予单个或多个资源权限时可采用下述的六段式描述方式，每种产品都拥有其各自的资源和对应的资源定义详情。 六段式定义方式如下所示：
+1 qcs:project_id:service_type:region:account:resource 资源六段式包含以下六个字段，详细含义及示例如下：
+字段名称 含义及取值 是否必填 示例 qcs qcloud service 的简称，表示是腾讯云的云资源。 是 qcs project_id 描述项目信息，仅兼容 CAM 早期逻辑，当前策略语法禁止填写该信息，置空即可。 否 置空 service_type 描述产品简称，详细可查看 支持 CAM 的产品 中的 “CAM 中简称”。值为空时表示所有产品。 否 云服务器为 cvm内容分发网络为 cdn region 描述地域信息，地域命名方式请参考 地域列表；值为空的时候表示所有地域。 否 华北地区(北京)为 ap-beijing华南地区(广州)为 ap-guangzhou account 描述资源拥有者的主账号信息，目前支持两种方式描述资源拥有者，uin 和 uid 方式。uin 方式，即主账号的账户ID，表示为uin/${uin}。uid 方式，即主账号的 APPID，表示为uid/${appid}，仅 COS 和 CAS 业务的资源拥有者使用该方式描述。值为空的时候表示创建策略的 CAM 用户所属的主账号。 否 uin 如：uin/12345678uid 如：uid/10001234 resource 描述各产品的具体资源详情，目前支持两种方式描述资源信息，resource_type/${resourceid} 和 &lt;resource_type&gt;/&lt;resource_path&gt;。resource_type/${resourceid}：resourcetype 为资源前缀，描述资源类型，详细可查看 支持 CAM 的业务接口 中产品的资源六段式；${resourceid} 为具体的资源 ID，可前往各个产品控制台查看，值为 * 时代表该类型资源的所有资源。&lt;resource_type&gt;/&lt;resource_path&gt;：resourcetype 为资源前缀，描述资源类型；&lt;resource_path&gt; 为资源路径，该方式下，支持目录级的前缀匹配。详细可查看 支持 CAM 的业务接口 中产品的资源六段式。 是 云服务器：instance/ins-1云数据库 MySQL：instanceId/cdb-1对象存储 COS：prefix//10001234/bucket1/* 表示 bucket1 下的所有文件。COS 资源（resource）支持多种类型，详情请参见 COS 授权策略使用指引 禁止访问消息队列角色管理-指定环境 策略语法：]]></description>
+</item>
+</channel>
+</rss>
