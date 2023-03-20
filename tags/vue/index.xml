@@ -1,0 +1,33 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>vue - Tag - 熊仔家族</title>
+    <link>http://qq516249940.github.io/tags/vue/</link>
+    <description>vue - Tag - 熊仔家族</description>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 20 Mar 2023 14:42:24 &#43;0800</lastBuildDate><atom:link href="http://qq516249940.github.io/tags/vue/" rel="self" type="application/rss+xml" /><item>
+  <title>Js中的export,default作用</title>
+  <link>http://qq516249940.github.io/posts/vue/js%E4%B8%AD%E7%9A%84exportdefault%E4%BD%9C%E7%94%A8/</link>
+  <pubDate>Mon, 20 Mar 2023 14:42:24 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://qq516249940.github.io/posts/vue/js%E4%B8%AD%E7%9A%84exportdefault%E4%BD%9C%E7%94%A8/</guid>
+  <description><![CDATA[export default语句 在JavaScript中，export default语句用于将模块中的一个值作为默认导出。默认导出是模块中的主要导出，它通常是模块中的一个函数、类或对象。当其他文件导入模块时，它们可以使用import语句来获取默认导出，并将其分配给任何名称。
+以下是一个示例，展示了如何使用export default语句导出一个函数：
+1 2 3 4 5 6 7 // math.mjs const add = (a, b) =&gt; a + b; const subtract = (a, b) =&gt; a - b; export default function multiply(a, b) { return a * b; } 在这个示例中，我们首先定义了两个函数add和subtract。然后，我们使用export default语句将multiply函数作为默认导出。这意味着其他文件可以使用以下语法导入multiply函数：
+1 2 3 4 // other.mjs import multiply from &#39;./math.mjs&#39;; console.log(multiply(2, 3)); // 输出 6 在这个示例中，我们使用import语句将multiply函数导入到另一个文件中。我们使用multiply函数计算2和3的乘积，并将结果打印到控制台中。
+需要注意的是，每个模块只能有一个默认导出。如果您需要导出多个值，可以使用命名导出语法，例如export const。
+linux 如何运行js文件 如果要在linux 命令行访问，需要创建一个文件
+1 2 3 4 // 在 package.]]></description>
+</item>
+<item>
+  <title>Main.js文件配置</title>
+  <link>http://qq516249940.github.io/posts/vue/main.js%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/</link>
+  <pubDate>Mon, 20 Mar 2023 11:29:43 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://qq516249940.github.io/posts/vue/main.js%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/</guid>
+  <description><![CDATA[在 Vue 3 中，src/main.js 文件是应用程序的主要入口点。在这个文件中，你需要进行一些基本的配置，例如导入 Vue 库、创建 Vue 实例、挂载 Vue 实例等。
+以下是一个示例 src/main.js 文件的基本配置：
+1 2 3 4 5 6 import { createApp } from &#39;vue&#39;; import App from &#39;./App.vue&#39;; const app = createApp(App); app.mount(&#39;#app&#39;); 在这个示例中，我们首先导入了 createApp 函数和 App 组件，然后使用 createApp 函数创建了一个 Vue 实例，并将 App 组件作为根组件传递给它。最后，我们使用 mount 方法将 Vue 实例挂载到 HTML 元素上。
+你还可以在 createApp 函数中进行其他配置，例如添加插件、定义全局组件、定义全局指令等。例如，以下是一个示例 src/main.js 文件，其中我们添加了 vue-router 插件和一个全局组件：
+1 2 3 4 5 6 7 8 9 10 11 import { createApp } from &#39;vue&#39;; import App from &#39;.]]></description>
+</item>
+</channel>
+</rss>
