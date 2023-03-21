@@ -130,6 +130,29 @@
         <span id="typeit-profile-subtitle" class="typeit"></span></h2><div class="links"><a href="/index.xml" title="RSS"target="_blank" rel="external nofollow noopener noreferrer me"><i class="fa-solid fa-rss fa-fw" aria-hidden="true"></i>
     </a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+    <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/k8s/pod%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">Pod生命周期</a>
+  </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      </span></span>&nbsp;<span class="post-publish" title='2023-03-21 16:34:30'>published on <time datetime="2023-03-21">2023-03-21</time></span>&nbsp;<span class="post-category">included in <a href="/categories/k8s/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> k8s</a></span></div><div class="content">Pod 生命周期 在整个生命周期中，Pod 会出现 5 种阶段（Phase）。 Pending：Pod 被 K8s 创建出来后，起始于 Pending 阶段。在 Pending 阶段，Pod 将经过调度，被分配至目标节点开始拉取镜像、加载依赖项、创建容器。
+Running：当 Pod 所有容器都已被创建，且至少一个容器已经在运行中，Pod 将进入 Running 阶段。
+Succeeded：当 Pod 中的所有容器都执行完成后终止，并且不会再重启，Pod 将进入 Succeeded 阶段。
+Failed：若 Pod 中的所有容器都已终止，并且至少有一个容器是因为失败终止，也就是说容器以非 0 状态异常退出或被系统终止，Pod 将进入 Failed 阶段。
+Unkonwn：因为某些原因无法取得 Pod 状态，这种情况 Pod 将被置为 Unkonwn 状态。
+一般来说，对于 Job 类型的负载，Pod 在成功执行完任务之后将会以 Succeeded 状态为终态。而对于 Deployment 等负载，一般期望 Pod 能够持续提供服务，直到 Pod 因删除消失，或者因异常退出/被系统终止而进入 Failed 阶段。 Pod 的 5 个阶段是 Pod 在其生命周期中所处位置的简单宏观概述，并不是对容器或 Pod 状态的综合汇总。Pod 有一些细分状态（ PodConditions ），例如 Ready/NotReady、Initialized、 PodScheduled/Unschedulable 等。这些细分状态描述造成 Pod 所处阶段的具体成因是什么。比如，Pod 当前阶段是 Pending，对应的细分状态是 Unschedulable，这就意味着 Pod 调度出现了问题。 容器也有其生命周期状态（State）：Waiting、Running 和 Terminated。并且也有其对应的状态原因（Reason），例如 ContainerCreating、Error、OOMKilled、CrashLoopBackOff、Completed 等。而对于发生过重启或终止的容器，上一个状态（LastState）字段不仅包含状态原因，还包含上一次退出的状态码（Exit Code）。例如容器上一次退出状态码是 137，状态原因是 OOMKilled，说明容器是因为 OOM 被系统强行终止。在异常诊断过程中，容器的退出状态是至关重要的信息。 除了必要的集群和应用监控，一般还需要通过 kubectl 命令搜集异常状态信息。</div><div class="post-footer">
+    <a href="/posts/k8s/pod%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/k8s/' class="post-tag">k8s</a></div></div>
+</article>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+    <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/devops/%E8%AF%95%E7%94%A8%E6%9C%9F%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92%E5%8F%8A%E8%AF%95%E7%94%A8%E6%9C%9F%E8%80%83%E6%A0%B8%E6%A0%87%E5%87%86/">试用期工作学习计划及试用期考核标准</a>
+  </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      </span></span>&nbsp;<span class="post-publish" title='2023-03-21 11:54:36'>published on <time datetime="2023-03-21">2023-03-21</time></span>&nbsp;<span class="post-category">included in <a href="/categories/devops/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> devops</a></span></div><div class="content">试用期工作学习计划及试用期考核标准可以分为三个阶段，每个阶段为一个月。以下是一个可能的计划和考核标准：
+第一阶段（第一个月）： 学习公司的基本业务和流程。 熟悉公司的产品和服务。 了解公司的文化和价值观。 完成公司分配的任务和项目。 考核标准：
+能够熟练使用公司的基本工具和软件。 能够理解公司的业务和流程。 能够按时完成公司分配的任务和项目。
+第二阶段（第二个月）： 深入学习公司的业务和流程。 掌握公司的产品和服务。 参与公司的项目并提出建设性意见。 学习并掌握公司的工作方法和流程。 考核标准：
+能够独立完成公司分配的任务和项目。 能够提出建设性意见，并为公司的项目做出贡献。 能够熟练使用公司的工具和软件。
+第三阶段（第三个月）： 参与公司的重要项目。 学习并掌握公司的管理方法和流程。 掌握并运用公司的核心技能。 为公司的发展提出建设性意见。 考核标准：
+能够独立完成公司的重要项目。 能够为公司的发展提出建设性意见。 能够掌握并运用公司的核心技能。 能够理解并运用公司的管理方法和流程。 以上是一个可能的试用期工作学习计划及试用期考核标准，具体的计划和标准可以根据公司的实际情况进行调整。</div><div class="post-footer">
+    <a href="/posts/devops/%E8%AF%95%E7%94%A8%E6%9C%9F%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92%E5%8F%8A%E8%AF%95%E7%94%A8%E6%9C%9F%E8%80%83%E6%A0%B8%E6%A0%87%E5%87%86/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/devops/' class="post-tag">devops</a></div></div>
+</article>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
     <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/vue/js%E4%B8%AD%E7%9A%84exportdefault%E4%BD%9C%E7%94%A8/">Js中的export,default作用</a>
   </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
       </span></span>&nbsp;<span class="post-publish" title='2023-03-20 14:42:24'>published on <time datetime="2023-03-20">2023-03-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> vue</a></span></div><div class="content">export default语句 在JavaScript中，export default语句用于将模块中的一个值作为默认导出。默认导出是模块中的主要导出，它通常是模块中的一个函数、类或对象。当其他文件导入模块时，它们可以使用import语句来获取默认导出，并将其分配给任何名称。
@@ -188,33 +211,6 @@ linux 如何运行js文件 如果要在linux 命令行访问，需要创建一�
 容量规划：对资源容量进行规划和管理，包括硬件容量、软件容量、网络容量等，需要制定容量规划计划、容量监控管理、容量扩展预测等流程，以确保资源能够满足业务需求。
 总之，资源管理流程需要根据具体情况进行制定和实施，以确保资源能够得到有效的管理和利用，同时也需要不断优化和改进，以适应业务的发展和变化。</div><div class="post-footer">
     <a href="/posts/devops/%E8%BF%90%E7%BB%B4%E7%AE%A1%E7%90%86%E4%B8%AD%E7%9A%84%E6%B5%81%E7%A8%8B/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/devops/' class="post-tag">devops</a></div></div>
-</article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-    <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/devops/%E8%BF%90%E7%BB%B4%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%A6%82%E4%BD%95%E9%87%8F%E5%8C%96%E5%B7%A5%E4%BD%9C/">运维工程师如何量化工作</a>
-  </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      </span></span>&nbsp;<span class="post-publish" title='2023-03-16 14:36:38'>published on <time datetime="2023-03-16">2023-03-16</time></span>&nbsp;<span class="post-category">included in <a href="/categories/devops/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> devops</a></span></div><div class="content">运维工程师可以通过以下方式来量化工作：
-服务器数量：记录服务器的数量和类型，以便了解团队所管理的服务器规模。
-故障处理时间：记录故障处理的时间，以便了解团队的故障处理效率。
-系统可用性：记录系统的可用性和稳定性，以便了解团队所管理的系统的稳定性情况。
-安全漏洞修复：记录安全漏洞修复的数量和时间，以便了解团队的安全工作情况。
-自动化程度：记录自动化程度的提高情况，例如自动化脚本的编写和使用情况，以便了解团队的自动化程度。
-成本控制：记录成本控制情况，例如服务器和软件的采购成本，以便了解团队的成本控制情况。
-用户满意度：记录用户满意度和反馈，以便了解团队的服务质量和用户体验。
-总之，量化工作可以帮助运维工程师更好地了解工作进展和成果，并为团队的工作提供有力的支持。
-还有稳定性量化体系、成本量化体系、效率量化体系</div><div class="post-footer">
-    <a href="/posts/devops/%E8%BF%90%E7%BB%B4%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%A6%82%E4%BD%95%E9%87%8F%E5%8C%96%E5%B7%A5%E4%BD%9C/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/devops/' class="post-tag">devops</a></div></div>
-</article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-    <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/devops/%E8%BF%90%E7%BB%B4%E5%9B%A2%E9%98%9F%E5%A6%82%E4%BD%95%E5%86%99%E5%91%A8%E6%8A%A5/">运维团队如何写周报</a>
-  </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      </span></span>&nbsp;<span class="post-publish" title='2023-03-16 14:26:18'>published on <time datetime="2023-03-16">2023-03-16</time></span>&nbsp;<span class="post-category">included in <a href="/categories/devops/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> devops</a></span></div><div class="content">运维团队写周报的目的是为了向管理层和同事汇报上周的工作进展和成果，以及下周的计划和目标。以下是一些编写周报的建议：
-确定周报的格式和内容：周报的格式可以根据团队的需要进行调整，但通常包括工作进展、问题和解决方案、下周计划和目标等内容。
-每日记录工作内容：每天记录工作内容和进展，以便在写周报时能够更准确地反映工作进展和成果。
-突出重点：在写周报时，应重点突出上周的重要工作和成果，以及下周的重点计划和目标。
-量化工作成果：在写周报时，应尽量量化工作成果，例如服务器的数量、故障处理时间等，以便更好地展示工作的效果。
-避免使用专业术语：周报是向管理层和同事汇报工作进展的一种方式，因此应尽量避免使用过多的专业术语，以便让读者更容易理解。
-定期发送周报：周报应该在每周的固定时间发送，以便管理层和同事能够及时了解团队的工作进展和成果。 总之，写周报是一个重要的沟通工具，可以帮助运维团队更好地与其他团队成员进行沟通和协作。</div><div class="post-footer">
-    <a href="/posts/devops/%E8%BF%90%E7%BB%B4%E5%9B%A2%E9%98%9F%E5%A6%82%E4%BD%95%E5%86%99%E5%91%A8%E6%8A%A5/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/devops/' class="post-tag">devops</a></div></div>
 </article>
 <ul class="pagination"><li class="page-item active">
           <span class="page-link">
