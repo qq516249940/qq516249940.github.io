@@ -130,6 +130,16 @@
         <span id="typeit-profile-subtitle" class="typeit"></span></h2><div class="links"><a href="/index.xml" title="RSS"target="_blank" rel="external nofollow noopener noreferrer me"><i class="fa-solid fa-rss fa-fw" aria-hidden="true"></i>
     </a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+    <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/linux/pulsar%E5%88%9B%E5%BB%BA%E7%A7%9F%E6%88%B7%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4topic%E5%91%BD%E4%BB%A4/">Pulsar创建租户、命名空间、topic命令</a>
+  </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      </span></span>&nbsp;<span class="post-publish" title='2023-03-23 16:39:01'>published on <time datetime="2023-03-23">2023-03-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/linux/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> linux</a></span></div><div class="content">在Apache Pulsar中，可以使用以下命令来创建租户、命名空间和topic：
+创建租户 1 bin/pulsar-admin tenants create &lt;tenant-name&gt; --admin-roles &lt;admin-roles&gt; 其中，&lt;tenant-name&gt;是新租户的名称，&lt;admin-roles&gt;是可以管理该租户的角色列表。
+创建命名空间： 1 bin/pulsar-admin namespaces create &lt;tenant-name&gt;/&lt;namespace-name&gt; 其中，&lt;tenant-name&gt;是新命名空间所属的租户名称，&lt;namespace-name&gt;是新命名空间的名称。
+创建topic： 1 bin/pulsar-admin topics create &lt;tenant-name&gt;/&lt;namespace-name&gt;/&lt;topic-name&gt; 其中，&lt;tenant-name&gt;和&lt;namespace-name&gt;是新topic所属的租户和命名空间名称，&lt;topic-name&gt;是新topic的名称。
+请注意，创建租户和命名空间需要具有管理员权限的身份验证令牌。如果你没有这个令牌，你需要先获取它。此外，创建topic需要具有对应租户和命名空间的写入权限。</div><div class="post-footer">
+    <a href="/posts/linux/pulsar%E5%88%9B%E5%BB%BA%E7%A7%9F%E6%88%B7%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4topic%E5%91%BD%E4%BB%A4/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/linux/' class="post-tag">linux</a></div></div>
+</article>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
     <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/k8s/pod%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">Pod生命周期</a>
   </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
       </span></span>&nbsp;<span class="post-publish" title='2023-03-21 16:34:30'>published on <time datetime="2023-03-21">2023-03-21</time></span>&nbsp;<span class="post-category">included in <a href="/categories/k8s/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> k8s</a></span></div><div class="content">Pod 生命周期 在整个生命周期中，Pod 会出现 5 种阶段（Phase）。 Pending：Pod 被 K8s 创建出来后，起始于 Pending 阶段。在 Pending 阶段，Pod 将经过调度，被分配至目标节点开始拉取镜像、加载依赖项、创建容器。
@@ -184,33 +194,6 @@ linux 如何运行js文件 如果要在linux 命令行访问，需要创建一�
 價平量增，轉多信號： 股價經過持續下跌來到低檔區，出現成交量增加、股價回穩現象，此時，一般成交量的陽線明顯多於陰線，凸凹量差比較明顯，說明底部在積聚上漲動力，有主力在進貨為中線轉陽信號，可以適量買進持股待漲。有時也會在上升趨勢中途出現「價平量增」，則說明股價上漲暫時受挫，只要上升趨勢未破，一般整理後仍會有行情。
 價平量縮，警戒信號： 成交量顯著減少，股價經過長期大幅上漲之後，進行橫向整理不再上漲，此為警戒出貨的信號。此階段如果突發巨量拉出大陽或大陰線，無論有無利好利空消息，均應果斷出場。</div><div class="post-footer">
     <a href="/posts/%E5%A4%A7%E4%BD%9C%E6%89%8B/%E9%87%8F%E4%BB%B7%E5%92%8C%E6%B6%A8%E8%B7%8C%E5%85%B3%E7%B3%BB/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/%E5%A4%A7%E4%BD%9C%E6%89%8B/' class="post-tag">大作手</a></div></div>
-</article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-    <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/devops/%E8%BF%90%E7%BB%B4%E7%AE%A1%E7%90%86%E4%B8%AD%E7%9A%84%E6%B5%81%E7%A8%8B/">运维管理中的流程</a>
-  </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      </span></span>&nbsp;<span class="post-publish" title='2023-03-17 15:40:43'>published on <time datetime="2023-03-17">2023-03-17</time></span>&nbsp;<span class="post-category">included in <a href="/categories/devops/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> devops</a></span></div><div class="content">运维管理中的流程通常包括以下几个方面： 故障管理流程：当系统出现故障时，需要有明确的故障处理流程，包括故障报告、故障诊断、故障修复、故障恢复等环节。
-变更管理流程：当需要对系统进行变更时，需要有明确的变更管理流程，包括变更申请、变更评估、变更批准、变更实施、变更验证等环节。
-安全管理流程：当需要对系统进行安全管理时，需要有明确的安全管理流程，包括安全检查、漏洞修复、安全加固等环节。
-日常运维流程：运维人员需要按照日常运维流程进行工作，包括系统监控、性能优化、备份恢复、容量规划等环节。
-服务管理流程：当需要提供服务时，需要有明确的服务管理流程，包括服务需求分析、服务计划、服务实施、服务监控等环节。
-资源管理流程：管理和优化资源的使用，包括硬件资源、软件资源、人力资源等。
-以上流程是运维管理中比较常见的流程，通过建立流程可以规范运维工作的流程，提高工作效率和质量。
-服务管理流程 以下是一个简单的服务管理流程实施计划：
-服务需求分析：收集和分析用户对服务的需求，包括用户需求、业务需求等，以便制定服务计划和实施方案。
-服务计划：制定服务计划，包括服务目标、服务内容、服务标准、服务时间等，以便明确服务的范围和要求。
-服务实施：按照服务计划进行服务实施，包括服务开发、服务测试、服务部署等环节，以确保服务能够按照计划顺利实施。
-服务监控：对服务进行监控和评估，包括服务质量、服务效果、服务反馈等，以便及时发现问题并进行改进。
-服务改进：根据监控结果和用户反馈，对服务进行改进和优化，以提高服务质量和用户满意度。
-服务维护：对服务进行维护和更新，包括服务升级、服务维护、服务备份等，以确保服务的稳定性和可靠性。
-总之，服务管理流程需要根据具体情况进行制定和实施，以确保服务能够按照计划顺利实施，并且能够不断优化和改进。
-资源管理流程 以下是一个简单的资源管理流程实施方案：
-硬件资源管理：对硬件资源进行管理，包括服务器、网络设备、存储设备等，需要制定硬件采购计划、硬件配置管理、硬件维护保养等流程，以确保硬件资源的稳定和可靠性。
-软件资源管理：对软件资源进行管理，包括操作系统、数据库、应用程序等，需要制定软件采购计划、软件配置管理、软件升级维护等流程，以确保软件资源的稳定和安全性。
-人力资源管理：对人力资源进行管理，包括招聘、培训、考核等，需要制定人力资源管理计划、人员配置管理、人员绩效考核等流程，以确保团队的稳定和发展。
-财务资源管理：对财务资源进行管理，包括预算管理、成本控制、费用核算等，需要制定财务管理计划、费用审批管理、财务报表分析等流程，以确保资源的合理利用和成本控制。
-容量规划：对资源容量进行规划和管理，包括硬件容量、软件容量、网络容量等，需要制定容量规划计划、容量监控管理、容量扩展预测等流程，以确保资源能够满足业务需求。
-总之，资源管理流程需要根据具体情况进行制定和实施，以确保资源能够得到有效的管理和利用，同时也需要不断优化和改进，以适应业务的发展和变化。</div><div class="post-footer">
-    <a href="/posts/devops/%E8%BF%90%E7%BB%B4%E7%AE%A1%E7%90%86%E4%B8%AD%E7%9A%84%E6%B5%81%E7%A8%8B/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/devops/' class="post-tag">devops</a></div></div>
 </article>
 <ul class="pagination"><li class="page-item active">
           <span class="page-link">

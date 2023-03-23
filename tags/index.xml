@@ -3,7 +3,15 @@
     <title>Tags - Tag - 熊仔家族</title>
     <link>http://qq516249940.github.io/tags/</link>
     <description>Tags - Tag - 熊仔家族</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 21 Mar 2023 16:34:30 &#43;0800</lastBuildDate><atom:link href="http://qq516249940.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 23 Mar 2023 16:39:01 &#43;0800</lastBuildDate><atom:link href="http://qq516249940.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+  <title>linux</title>
+  <link>http://qq516249940.github.io/tags/linux/</link>
+  <pubDate>Thu, 23 Mar 2023 16:39:01 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://qq516249940.github.io/tags/linux/</guid>
+  <description><![CDATA[]]></description>
+</item>
+<item>
   <title>k8s</title>
   <link>http://qq516249940.github.io/tags/k8s/</link>
   <pubDate>Tue, 21 Mar 2023 16:34:30 &#43;0800</pubDate>
@@ -73,14 +81,6 @@
   <pubDate>Tue, 07 Mar 2023 15:25:49 &#43;0800</pubDate>
   <author>Author</author>
   <guid>http://qq516249940.github.io/tags/golang/</guid>
-  <description><![CDATA[]]></description>
-</item>
-<item>
-  <title>v2ray</title>
-  <link>http://qq516249940.github.io/tags/v2ray/</link>
-  <pubDate>Sat, 04 Mar 2023 23:02:30 &#43;0800</pubDate>
-  <author>Author</author>
-  <guid>http://qq516249940.github.io/tags/v2ray/</guid>
   <description><![CDATA[]]></description>
 </item>
 </channel>

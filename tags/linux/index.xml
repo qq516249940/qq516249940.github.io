@@ -1,0 +1,19 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>linux - Tag - 熊仔家族</title>
+    <link>http://qq516249940.github.io/tags/linux/</link>
+    <description>linux - Tag - 熊仔家族</description>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 23 Mar 2023 16:39:01 &#43;0800</lastBuildDate><atom:link href="http://qq516249940.github.io/tags/linux/" rel="self" type="application/rss+xml" /><item>
+  <title>Pulsar创建租户、命名空间、topic命令</title>
+  <link>http://qq516249940.github.io/posts/linux/pulsar%E5%88%9B%E5%BB%BA%E7%A7%9F%E6%88%B7%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4topic%E5%91%BD%E4%BB%A4/</link>
+  <pubDate>Thu, 23 Mar 2023 16:39:01 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://qq516249940.github.io/posts/linux/pulsar%E5%88%9B%E5%BB%BA%E7%A7%9F%E6%88%B7%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4topic%E5%91%BD%E4%BB%A4/</guid>
+  <description><![CDATA[在Apache Pulsar中，可以使用以下命令来创建租户、命名空间和topic：
+创建租户 1 bin/pulsar-admin tenants create &lt;tenant-name&gt; --admin-roles &lt;admin-roles&gt; 其中，&lt;tenant-name&gt;是新租户的名称，&lt;admin-roles&gt;是可以管理该租户的角色列表。
+创建命名空间： 1 bin/pulsar-admin namespaces create &lt;tenant-name&gt;/&lt;namespace-name&gt; 其中，&lt;tenant-name&gt;是新命名空间所属的租户名称，&lt;namespace-name&gt;是新命名空间的名称。
+创建topic： 1 bin/pulsar-admin topics create &lt;tenant-name&gt;/&lt;namespace-name&gt;/&lt;topic-name&gt; 其中，&lt;tenant-name&gt;和&lt;namespace-name&gt;是新topic所属的租户和命名空间名称，&lt;topic-name&gt;是新topic的名称。
+请注意，创建租户和命名空间需要具有管理员权限的身份验证令牌。如果你没有这个令牌，你需要先获取它。此外，创建topic需要具有对应租户和命名空间的写入权限。]]></description>
+</item>
+</channel>
+</rss>

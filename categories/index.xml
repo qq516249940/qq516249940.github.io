@@ -3,7 +3,15 @@
     <title>Categories - Category - 熊仔家族</title>
     <link>http://qq516249940.github.io/categories/</link>
     <description>Categories - Category - 熊仔家族</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 21 Mar 2023 16:34:30 &#43;0800</lastBuildDate><atom:link href="http://qq516249940.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 23 Mar 2023 16:39:01 &#43;0800</lastBuildDate><atom:link href="http://qq516249940.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+  <title>linux</title>
+  <link>http://qq516249940.github.io/categories/linux/</link>
+  <pubDate>Thu, 23 Mar 2023 16:39:01 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://qq516249940.github.io/categories/linux/</guid>
+  <description><![CDATA[]]></description>
+</item>
+<item>
   <title>k8s</title>
   <link>http://qq516249940.github.io/categories/k8s/</link>
   <pubDate>Tue, 21 Mar 2023 16:34:30 &#43;0800</pubDate>
@@ -73,14 +81,6 @@
   <pubDate>Tue, 07 Mar 2023 15:25:49 &#43;0800</pubDate>
   <author>Author</author>
   <guid>http://qq516249940.github.io/categories/golang/</guid>
-  <description><![CDATA[]]></description>
-</item>
-<item>
-  <title>代理</title>
-  <link>http://qq516249940.github.io/categories/%E4%BB%A3%E7%90%86/</link>
-  <pubDate>Sat, 04 Mar 2023 23:02:30 &#43;0800</pubDate>
-  <author>Author</author>
-  <guid>http://qq516249940.github.io/categories/%E4%BB%A3%E7%90%86/</guid>
   <description><![CDATA[]]></description>
 </item>
 </channel>
