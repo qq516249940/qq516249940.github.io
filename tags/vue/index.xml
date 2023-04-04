@@ -3,7 +3,19 @@
     <title>vue - Tag - 熊仔家族</title>
     <link>http://qq516249940.github.io/tags/vue/</link>
     <description>vue - Tag - 熊仔家族</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 20 Mar 2023 14:42:24 &#43;0800</lastBuildDate><atom:link href="http://qq516249940.github.io/tags/vue/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 24 Mar 2023 15:16:02 &#43;0800</lastBuildDate><atom:link href="http://qq516249940.github.io/tags/vue/" rel="self" type="application/rss+xml" /><item>
+  <title>Vue路由剖析</title>
+  <link>http://qq516249940.github.io/posts/vue/vue%E8%B7%AF%E7%94%B1%E5%89%96%E6%9E%90/</link>
+  <pubDate>Fri, 24 Mar 2023 15:16:02 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://qq516249940.github.io/posts/vue/vue%E8%B7%AF%E7%94%B1%E5%89%96%E6%9E%90/</guid>
+  <description><![CDATA[Vue是一个流行的JavaScript框架，用于构建单页面应用程序（SPA）。Vue Router是Vue.js官方的路由管理器，它允许您通过URL路径映射到组件，并在应用程序中进行导航。
+Vue Router的核心是路由映射，它将URL路径映射到组件。路由映射是一个JavaScript对象，其中每个键都是URL路径，每个值都是要呈现的组件。例如，以下路由映射将路径&quot;/home&quot;映射到名为&quot;Home&quot;的组件：
+1 2 3 const routes = { &#39;/home&#39;: Home } Vue Router使用HTML5 History API或哈希模式来管理浏览器历史记录。在HTML5 History模式下，Vue Router使用pushState和replaceState方法来添加和修改浏览器历史记录。在哈希模式下，Vue Router使用URL的哈希部分来模拟历史记录。
+要使用Vue Router，您需要将其添加为Vue.js应用程序的插件。在创建Vue实例之前，您需要先安装Vue Router并将其传递给Vue构造函数：
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 import Vue from &#39;vue&#39; import VueRouter from &#39;vue-router&#39; import Home from &#39;./components/Home.vue&#39; Vue.use(VueRouter) const routes = { &#39;/home&#39;: Home } const router = new VueRouter({ routes }) const app = new Vue({ router }).]]></description>
+</item>
+<item>
   <title>Js中的export,default作用</title>
   <link>http://qq516249940.github.io/posts/vue/js%E4%B8%AD%E7%9A%84exportdefault%E4%BD%9C%E7%94%A8/</link>
   <pubDate>Mon, 20 Mar 2023 14:42:24 &#43;0800</pubDate>

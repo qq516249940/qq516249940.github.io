@@ -3,7 +3,16 @@
     <title>devops - Category - 熊仔家族</title>
     <link>http://qq516249940.github.io/categories/devops/</link>
     <description>devops - Category - 熊仔家族</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 21 Mar 2023 11:54:36 &#43;0800</lastBuildDate><atom:link href="http://qq516249940.github.io/categories/devops/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 04 Apr 2023 17:27:07 &#43;0800</lastBuildDate><atom:link href="http://qq516249940.github.io/categories/devops/" rel="self" type="application/rss+xml" /><item>
+  <title>编写一个简单的agent监控文件变化</title>
+  <link>http://qq516249940.github.io/posts/devops/%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84agent%E7%9B%91%E6%8E%A7%E6%96%87%E4%BB%B6%E5%8F%98%E5%8C%96/</link>
+  <pubDate>Tue, 04 Apr 2023 17:27:07 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://qq516249940.github.io/posts/devops/%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84agent%E7%9B%91%E6%8E%A7%E6%96%87%E4%BB%B6%E5%8F%98%E5%8C%96/</guid>
+  <description><![CDATA[本次需求是获取.appjvm文件，监控到有文件变化就发送数据到后端接口,agent是守护进程模式。有两个字段，一个是hostname,一个是文本的内容content。经过后端api解析获取数据
+agent脚本 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 import os import time import requests import socket import logging from watchdog.]]></description>
+</item>
+<item>
   <title>试用期工作学习计划及试用期考核标准</title>
   <link>http://qq516249940.github.io/posts/devops/%E8%AF%95%E7%94%A8%E6%9C%9F%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92%E5%8F%8A%E8%AF%95%E7%94%A8%E6%9C%9F%E8%80%83%E6%A0%B8%E6%A0%87%E5%87%86/</link>
   <pubDate>Tue, 21 Mar 2023 11:54:36 &#43;0800</pubDate>
