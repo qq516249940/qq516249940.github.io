@@ -3,7 +3,15 @@
     <title>devops - Tag - 熊仔家族</title>
     <link>http://qq516249940.github.io/tags/devops/</link>
     <description>devops - Tag - 熊仔家族</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 04 Apr 2023 17:27:07 &#43;0800</lastBuildDate><atom:link href="http://qq516249940.github.io/tags/devops/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 13 Apr 2023 11:42:24 &#43;0800</lastBuildDate><atom:link href="http://qq516249940.github.io/tags/devops/" rel="self" type="application/rss+xml" /><item>
+  <title>提测模板</title>
+  <link>http://qq516249940.github.io/posts/devops/%E6%8F%90%E6%B5%8B%E6%A8%A1%E6%9D%BF/</link>
+  <pubDate>Thu, 13 Apr 2023 11:42:24 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://qq516249940.github.io/posts/devops/%E6%8F%90%E6%B5%8B%E6%A8%A1%E6%9D%BF/</guid>
+  <description><![CDATA[ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 提测内容： 1.每日更新xxxx新增部​分xxxx场景 updatxxxxInterest 2.正常xxxx信息同步job新增部分xxxx场景 updatexxxxStatus 涉及服务： xxxx-backend 代码分支： xxxxx-backend - hotfix-4.1.2-0412 影响范围： xxxjob xxxjob sql脚本及配置：无 ]]></description>
+</item>
+<item>
   <title>编写一个简单的agent监控文件变化</title>
   <link>http://qq516249940.github.io/posts/devops/%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84agent%E7%9B%91%E6%8E%A7%E6%96%87%E4%BB%B6%E5%8F%98%E5%8C%96/</link>
   <pubDate>Tue, 04 Apr 2023 17:27:07 &#43;0800</pubDate>

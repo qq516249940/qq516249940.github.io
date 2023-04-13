@@ -130,6 +130,18 @@
         <span id="typeit-profile-subtitle" class="typeit"></span></h2><div class="links"><a href="/index.xml" title="RSS"target="_blank" rel="external nofollow noopener noreferrer me"><i class="fa-solid fa-rss fa-fw" aria-hidden="true"></i>
     </a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+    <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/vue/js%E4%B8%AD%E7%9A%84exportdefault%E4%BD%9C%E7%94%A8/">Js中的export,default作用</a>
+  </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      </span></span>&nbsp;<span class="post-publish" title='2023-03-20 14:42:24'>published on <time datetime="2023-03-20">2023-03-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> vue</a></span></div><div class="content">export default语句 在JavaScript中，export default语句用于将模块中的一个值作为默认导出。默认导出是模块中的主要导出，它通常是模块中的一个函数、类或对象。当其他文件导入模块时，它们可以使用import语句来获取默认导出，并将其分配给任何名称。
+以下是一个示例，展示了如何使用export default语句导出一个函数：
+1 2 3 4 5 6 7 // math.mjs const add = (a, b) =&gt; a + b; const subtract = (a, b) =&gt; a - b; export default function multiply(a, b) { return a * b; } 在这个示例中，我们首先定义了两个函数add和subtract。然后，我们使用export default语句将multiply函数作为默认导出。这意味着其他文件可以使用以下语法导入multiply函数：
+1 2 3 4 // other.mjs import multiply from &#39;./math.mjs&#39;; console.log(multiply(2, 3)); // 输出 6 在这个示例中，我们使用import语句将multiply函数导入到另一个文件中。我们使用multiply函数计算2和3的乘积，并将结果打印到控制台中。
+需要注意的是，每个模块只能有一个默认导出。如果您需要导出多个值，可以使用命名导出语法，例如export const。
+linux 如何运行js文件 如果要在linux 命令行访问，需要创建一个文件
+1 2 3 4 // 在 package.</div><div class="post-footer">
+    <a href="/posts/vue/js%E4%B8%AD%E7%9A%84exportdefault%E4%BD%9C%E7%94%A8/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/vue/' class="post-tag">vue</a></div></div>
+</article>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
     <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/vue/main.js%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/">Main.js文件配置</a>
   </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
       </span></span>&nbsp;<span class="post-publish" title='2023-03-20 11:29:43'>published on <time datetime="2023-03-20">2023-03-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> vue</a></span></div><div class="content">在 Vue 3 中，src/main.js 文件是应用程序的主要入口点。在这个文件中，你需要进行一些基本的配置，例如导入 Vue 库、创建 Vue 实例、挂载 Vue 实例等。
@@ -203,14 +215,6 @@
 避免使用专业术语：周报是向管理层和同事汇报工作进展的一种方式，因此应尽量避免使用过多的专业术语，以便让读者更容易理解。
 定期发送周报：周报应该在每周的固定时间发送，以便管理层和同事能够及时了解团队的工作进展和成果。 总之，写周报是一个重要的沟通工具，可以帮助运维团队更好地与其他团队成员进行沟通和协作。</div><div class="post-footer">
     <a href="/posts/devops/%E8%BF%90%E7%BB%B4%E5%9B%A2%E9%98%9F%E5%A6%82%E4%BD%95%E5%86%99%E5%91%A8%E6%8A%A5/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/devops/' class="post-tag">devops</a></div></div>
-</article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-    <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/%E4%BA%91/%E8%85%BE%E8%AE%AF%E4%BA%91json%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%9D%83%E9%99%90%E7%AD%96%E7%95%A5/">腾讯云JSON格式的权限策略</a>
-  </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      </span></span>&nbsp;<span class="post-publish" title='2023-03-16 14:05:41'>published on <time datetime="2023-03-16">2023-03-16</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E4%BA%91/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 云</a></span></div><div class="content">单个或多个资源定义 授予单个或多个资源权限时可采用下述的六段式描述方式，每种产品都拥有其各自的资源和对应的资源定义详情。 六段式定义方式如下所示：
-1 qcs:project_id:service_type:region:account:resource 资源六段式包含以下六个字段，详细含义及示例如下：
-字段名称 含义及取值 是否必填 示例 qcs qcloud service 的简称，表示是腾讯云的云资源。 是 qcs project_id 描述项目信息，仅兼容 CAM 早期逻辑，当前策略语法禁止填写该信息，置空即可。 否 置空 service_type 描述产品简称，详细可查看 支持 CAM 的产品 中的 “CAM 中简称”。值为空时表示所有产品。 否 云服务器为 cvm内容分发网络为 cdn region 描述地域信息，地域命名方式请参考 地域列表；值为空的时候表示所有地域。 否 华北地区(北京)为 ap-beijing华南地区(广州)为 ap-guangzhou account 描述资源拥有者的主账号信息，目前支持两种方式描述资源拥有者，uin 和 uid 方式。uin 方式，即主账号的账户ID，表示为uin/${uin}。uid 方式，即主账号的 APPID，表示为uid/${appid}，仅 COS 和 CAS 业务的资源拥有者使用该方式描述。值为空的时候表示创建策略的 CAM 用户所属的主账号。 否 uin 如：uin/12345678uid 如：uid/10001234 resource 描述各产品的具体资源详情，目前支持两种方式描述资源信息，resource_type/${resourceid} 和 &lt;resource_type&gt;/&lt;resource_path&gt;。resource_type/${resourceid}：resourcetype 为资源前缀，描述资源类型，详细可查看 支持 CAM 的业务接口 中产品的资源六段式；${resourceid} 为具体的资源 ID，可前往各个产品控制台查看，值为 * 时代表该类型资源的所有资源。&lt;resource_type&gt;/&lt;resource_path&gt;：resourcetype 为资源前缀，描述资源类型；&lt;resource_path&gt; 为资源路径，该方式下，支持目录级的前缀匹配。详细可查看 支持 CAM 的业务接口 中产品的资源六段式。 是 云服务器：instance/ins-1云数据库 MySQL：instanceId/cdb-1对象存储 COS：prefix//10001234/bucket1/* 表示 bucket1 下的所有文件。COS 资源（resource）支持多种类型，详情请参见 COS 授权策略使用指引 禁止访问消息队列角色管理-指定环境 策略语法：</div><div class="post-footer">
-    <a href="/posts/%E4%BA%91/%E8%85%BE%E8%AE%AF%E4%BA%91json%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%9D%83%E9%99%90%E7%AD%96%E7%95%A5/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/%E4%BA%91/' class="post-tag">云</a></div></div>
 </article>
 <ul class="pagination"><li class="page-item">
           <span class="page-link">
