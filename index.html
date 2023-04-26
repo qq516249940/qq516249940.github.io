@@ -130,6 +130,18 @@
         <span id="typeit-profile-subtitle" class="typeit"></span></h2><div class="links"><a href="/index.xml" title="RSS"target="_blank" rel="external nofollow noopener noreferrer me"><i class="fa-solid fa-rss fa-fw" aria-hidden="true"></i>
     </a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+    <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/linux/pve%E5%AE%89%E8%A3%85windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%A6%81%E7%82%B9/">Pve安装windows虚拟机要点</a>
+  </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      </span></span>&nbsp;<span class="post-publish" title='2023-04-23 14:54:20'>published on <time datetime="2023-04-23">2023-04-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/linux/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> linux</a></span></div><div class="content"> 下载virtio-win-0.1.208.iso 开启Qemu Geust Agent 虚拟机里面cmd，services.msc，查看QEMU Guest Agent是否正在运行中。 参考： Proxmox VE 安裝虛擬機：Windows 10 (二) </div><div class="post-footer">
+    <a href="/posts/linux/pve%E5%AE%89%E8%A3%85windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%A6%81%E7%82%B9/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/linux/' class="post-tag">linux</a><a href='/tags/pve/' class="post-tag">pve</a></div></div>
+</article>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+    <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/linux/tftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8/">Tftp服务器搭建和使用</a>
+  </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      </span></span>&nbsp;<span class="post-publish" title='2023-04-18 18:21:58'>published on <time datetime="2023-04-18">2023-04-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/linux/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> linux</a></span></div><div class="content">快速启动tftp服务端 1 2 3 pip install py3tftp #使用下面命令即可启动端口是69 udp的 python -m py3tftp 客户端上传文件 1 2 3 4 import tftpy client = tftpy.TftpClient(&#39;192.168.5.xxx&#39;, 69) client.upload(&#39;1.conf&#39;, &#39;1.conf&#39;) 没有任何报错，表示文件上传成功。</div><div class="post-footer">
+    <a href="/posts/linux/tftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/linux/' class="post-tag">linux</a></div></div>
+</article>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
     <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/devops/%E8%BF%90%E7%BB%B4%E5%91%8A%E8%AD%A6p1p2p3p4%E4%BB%A3%E8%A1%A8%E4%BB%80%E4%B9%88/">运维告警p1,p2,P3,P4代表什么</a>
   </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
       </span></span>&nbsp;<span class="post-publish" title='2023-04-18 10:38:00'>published on <time datetime="2023-04-18">2023-04-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/devops/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> devops</a></span></div><div class="content">P1、P2、P3、P4 是一种常见的告警级别分类，通常用于指示告警的优先级和紧急程度。以下是这些级别通常所代表的意义：
@@ -160,26 +172,6 @@ P4（低）：指类似日志记录错误、非关键性的功能异常等问题
 agent脚本 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 import os import time import requests import socket import logging from watchdog.</div><div class="post-footer">
     <a href="/posts/devops/%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84agent%E7%9B%91%E6%8E%A7%E6%96%87%E4%BB%B6%E5%8F%98%E5%8C%96/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/devops/' class="post-tag">devops</a><a href='/tags/python/' class="post-tag">python</a></div></div>
 </article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-    <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/vue/vue%E8%B7%AF%E7%94%B1%E5%89%96%E6%9E%90/">Vue路由剖析</a>
-  </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      </span></span>&nbsp;<span class="post-publish" title='2023-03-24 15:16:02'>published on <time datetime="2023-03-24">2023-03-24</time></span>&nbsp;<span class="post-category">included in <a href="/categories/vue/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> vue</a></span></div><div class="content">Vue是一个流行的JavaScript框架，用于构建单页面应用程序（SPA）。Vue Router是Vue.js官方的路由管理器，它允许您通过URL路径映射到组件，并在应用程序中进行导航。
-Vue Router的核心是路由映射，它将URL路径映射到组件。路由映射是一个JavaScript对象，其中每个键都是URL路径，每个值都是要呈现的组件。例如，以下路由映射将路径&quot;/home&quot;映射到名为&quot;Home&quot;的组件：
-1 2 3 const routes = { &#39;/home&#39;: Home } Vue Router使用HTML5 History API或哈希模式来管理浏览器历史记录。在HTML5 History模式下，Vue Router使用pushState和replaceState方法来添加和修改浏览器历史记录。在哈希模式下，Vue Router使用URL的哈希部分来模拟历史记录。
-要使用Vue Router，您需要将其添加为Vue.js应用程序的插件。在创建Vue实例之前，您需要先安装Vue Router并将其传递给Vue构造函数：
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 import Vue from &#39;vue&#39; import VueRouter from &#39;vue-router&#39; import Home from &#39;./components/Home.vue&#39; Vue.use(VueRouter) const routes = { &#39;/home&#39;: Home } const router = new VueRouter({ routes }) const app = new Vue({ router }).</div><div class="post-footer">
-    <a href="/posts/vue/vue%E8%B7%AF%E7%94%B1%E5%89%96%E6%9E%90/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/vue/' class="post-tag">vue</a></div></div>
-</article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-    <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/linux/pulsar%E5%88%9B%E5%BB%BA%E7%A7%9F%E6%88%B7%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4topic%E5%91%BD%E4%BB%A4/">Pulsar创建租户、命名空间、topic命令</a>
-  </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      </span></span>&nbsp;<span class="post-publish" title='2023-03-23 16:39:01'>published on <time datetime="2023-03-23">2023-03-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/linux/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> linux</a></span></div><div class="content">在Apache Pulsar中，可以使用以下命令来创建租户、命名空间和topic：
-创建租户 1 bin/pulsar-admin tenants create &lt;tenant-name&gt; --admin-roles &lt;admin-roles&gt; 其中，&lt;tenant-name&gt;是新租户的名称，&lt;admin-roles&gt;是可以管理该租户的角色列表。
-创建命名空间： 1 bin/pulsar-admin namespaces create &lt;tenant-name&gt;/&lt;namespace-name&gt; 其中，&lt;tenant-name&gt;是新命名空间所属的租户名称，&lt;namespace-name&gt;是新命名空间的名称。
-创建topic： 1 bin/pulsar-admin topics create &lt;tenant-name&gt;/&lt;namespace-name&gt;/&lt;topic-name&gt; 其中，&lt;tenant-name&gt;和&lt;namespace-name&gt;是新topic所属的租户和命名空间名称，&lt;topic-name&gt;是新topic的名称。
-请注意，创建租户和命名空间需要具有管理员权限的身份验证令牌。如果你没有这个令牌，你需要先获取它。此外，创建topic需要具有对应租户和命名空间的写入权限。</div><div class="post-footer">
-    <a href="/posts/linux/pulsar%E5%88%9B%E5%BB%BA%E7%A7%9F%E6%88%B7%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4topic%E5%91%BD%E4%BB%A4/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/linux/' class="post-tag">linux</a></div></div>
-</article>
 <ul class="pagination"><li class="page-item active">
           <span class="page-link">
             <a href="/">1</a>
@@ -196,7 +188,7 @@ Vue Router的核心是路由映射，它将URL路径映射到组件。路由映�
           <span class="page-link" aria-hidden="true">&hellip;</span>
         </li><li class="page-item">
           <span class="page-link">
-            <a href="/page/5/">5</a>
+            <a href="/page/6/">6</a>
           </span>
         </li></ul></div></main><footer class="footer">
     <div class="footer-container"><div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.110.0">Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.2.18-RC"><img class="fixit-icon" src="/fixit.min.svg" alt="FixIt logo" />&nbsp;FixIt</a>

@@ -3,20 +3,28 @@
     <title>Tags - Tag - 熊仔家族</title>
     <link>http://qq516249940.github.io/tags/</link>
     <description>Tags - Tag - 熊仔家族</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 18 Apr 2023 10:38:00 &#43;0800</lastBuildDate><atom:link href="http://qq516249940.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 23 Apr 2023 14:54:20 &#43;0800</lastBuildDate><atom:link href="http://qq516249940.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+  <title>linux</title>
+  <link>http://qq516249940.github.io/tags/linux/</link>
+  <pubDate>Sun, 23 Apr 2023 14:54:20 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://qq516249940.github.io/tags/linux/</guid>
+  <description><![CDATA[]]></description>
+</item>
+<item>
+  <title>pve</title>
+  <link>http://qq516249940.github.io/tags/pve/</link>
+  <pubDate>Sun, 23 Apr 2023 14:54:20 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://qq516249940.github.io/tags/pve/</guid>
+  <description><![CDATA[]]></description>
+</item>
+<item>
   <title>devops</title>
   <link>http://qq516249940.github.io/tags/devops/</link>
   <pubDate>Tue, 18 Apr 2023 10:38:00 &#43;0800</pubDate>
   <author>Author</author>
   <guid>http://qq516249940.github.io/tags/devops/</guid>
-  <description><![CDATA[]]></description>
-</item>
-<item>
-  <title>linux</title>
-  <link>http://qq516249940.github.io/tags/linux/</link>
-  <pubDate>Sat, 15 Apr 2023 14:42:05 &#43;0800</pubDate>
-  <author>Author</author>
-  <guid>http://qq516249940.github.io/tags/linux/</guid>
   <description><![CDATA[]]></description>
 </item>
 <item>
@@ -73,14 +81,6 @@
   <pubDate>Tue, 14 Mar 2023 14:50:08 &#43;0800</pubDate>
   <author>Author</author>
   <guid>http://qq516249940.github.io/tags/vpn/</guid>
-  <description><![CDATA[]]></description>
-</item>
-<item>
-  <title>draft</title>
-  <link>http://qq516249940.github.io/tags/draft/</link>
-  <pubDate>Wed, 08 Mar 2023 16:07:34 &#43;0800</pubDate>
-  <author>Author</author>
-  <guid>http://qq516249940.github.io/tags/draft/</guid>
   <description><![CDATA[]]></description>
 </item>
 </channel>

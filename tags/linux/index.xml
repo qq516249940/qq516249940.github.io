@@ -3,7 +3,23 @@
     <title>linux - Tag - 熊仔家族</title>
     <link>http://qq516249940.github.io/tags/linux/</link>
     <description>linux - Tag - 熊仔家族</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 15 Apr 2023 14:42:05 &#43;0800</lastBuildDate><atom:link href="http://qq516249940.github.io/tags/linux/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 23 Apr 2023 14:54:20 &#43;0800</lastBuildDate><atom:link href="http://qq516249940.github.io/tags/linux/" rel="self" type="application/rss+xml" /><item>
+  <title>Pve安装windows虚拟机要点</title>
+  <link>http://qq516249940.github.io/posts/linux/pve%E5%AE%89%E8%A3%85windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%A6%81%E7%82%B9/</link>
+  <pubDate>Sun, 23 Apr 2023 14:54:20 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://qq516249940.github.io/posts/linux/pve%E5%AE%89%E8%A3%85windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%A6%81%E7%82%B9/</guid>
+  <description><![CDATA[ 下载virtio-win-0.1.208.iso 开启Qemu Geust Agent 虚拟机里面cmd，services.msc，查看QEMU Guest Agent是否正在运行中。 参考： Proxmox VE 安裝虛擬機：Windows 10 (二) ]]></description>
+</item>
+<item>
+  <title>Tftp服务器搭建和使用</title>
+  <link>http://qq516249940.github.io/posts/linux/tftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8/</link>
+  <pubDate>Tue, 18 Apr 2023 18:21:58 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://qq516249940.github.io/posts/linux/tftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8/</guid>
+  <description><![CDATA[快速启动tftp服务端 1 2 3 pip install py3tftp #使用下面命令即可启动端口是69 udp的 python -m py3tftp 客户端上传文件 1 2 3 4 import tftpy client = tftpy.TftpClient(&#39;192.168.5.xxx&#39;, 69) client.upload(&#39;1.conf&#39;, &#39;1.conf&#39;) 没有任何报错，表示文件上传成功。]]></description>
+</item>
+<item>
   <title>Lftp使用ssh密钥连接sftp</title>
   <link>http://qq516249940.github.io/posts/linux/lftp%E4%BD%BF%E7%94%A8ssh%E5%AF%86%E9%92%A5%E8%BF%9E%E6%8E%A5sftp/</link>
   <pubDate>Sat, 15 Apr 2023 14:42:05 &#43;0800</pubDate>

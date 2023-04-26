@@ -5,55 +5,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
     <meta name="robots" content="noodp" />
-    <title>运维告警p1,p2,P3,P4代表什么 - 熊仔家族</title><meta name="author" content="">
+    <title>Tftp服务器搭建和使用 - 熊仔家族</title><meta name="author" content="">
 <meta name="author-link" content="">
-<meta name="description" content="P1、P2、P3、P4 是一种常见的告警级别分类，通常用于指示告警的优先级和紧急程度。以下是这些级别通常所代表的意义：
-P1（严重）：指出现了系统崩溃、关键功能异常或其他严重问题。此时需要立即采取行动，以避免系统出现大规模故障。
-P2（高）：指出现了重要功能异常或其他需要紧急处理的问题。虽然不是系统崩溃，但它会影响业务运作，并且需要迅速解决。
-P3（中）：指出现了较小的问题，可能会造成某些业务的中断，但并不影响整个系统的运行。
-P4（低）：指类似日志记录错误、非关键性的功能异常等问题。它们不会影响业务运行，但是需要记录以供后续分析。
-这些告警级别的使用可以帮助运维人员更好地管理和处理发生的问题，优先处理最严重的问题，提高系统的可靠性和稳定性。同时，对于不同级别的告警，可以设置不同的处理策略和时间目标，以最大化服务水平的维护。" /><meta name="keywords" content='devops' /><meta itemprop="name" content="运维告警p1,p2,P3,P4代表什么">
-<meta itemprop="description" content="P1、P2、P3、P4 是一种常见的告警级别分类，通常用于指示告警的优先级和紧急程度。以下是这些级别通常所代表的意义：
-P1（严重）：指出现了系统崩溃、关键功能异常或其他严重问题。此时需要立即采取行动，以避免系统出现大规模故障。
-P2（高）：指出现了重要功能异常或其他需要紧急处理的问题。虽然不是系统崩溃，但它会影响业务运作，并且需要迅速解决。
-P3（中）：指出现了较小的问题，可能会造成某些业务的中断，但并不影响整个系统的运行。
-P4（低）：指类似日志记录错误、非关键性的功能异常等问题。它们不会影响业务运行，但是需要记录以供后续分析。
-这些告警级别的使用可以帮助运维人员更好地管理和处理发生的问题，优先处理最严重的问题，提高系统的可靠性和稳定性。同时，对于不同级别的告警，可以设置不同的处理策略和时间目标，以最大化服务水平的维护。"><meta itemprop="datePublished" content="2023-04-18T10:38:00+08:00" />
-<meta itemprop="dateModified" content="2023-04-18T10:38:00+08:00" />
-<meta itemprop="wordCount" content="7">
-<meta itemprop="keywords" content="devops," /><meta property="og:title" content="运维告警p1,p2,P3,P4代表什么" />
-<meta property="og:description" content="P1、P2、P3、P4 是一种常见的告警级别分类，通常用于指示告警的优先级和紧急程度。以下是这些级别通常所代表的意义：
-P1（严重）：指出现了系统崩溃、关键功能异常或其他严重问题。此时需要立即采取行动，以避免系统出现大规模故障。
-P2（高）：指出现了重要功能异常或其他需要紧急处理的问题。虽然不是系统崩溃，但它会影响业务运作，并且需要迅速解决。
-P3（中）：指出现了较小的问题，可能会造成某些业务的中断，但并不影响整个系统的运行。
-P4（低）：指类似日志记录错误、非关键性的功能异常等问题。它们不会影响业务运行，但是需要记录以供后续分析。
-这些告警级别的使用可以帮助运维人员更好地管理和处理发生的问题，优先处理最严重的问题，提高系统的可靠性和稳定性。同时，对于不同级别的告警，可以设置不同的处理策略和时间目标，以最大化服务水平的维护。" />
+<meta name="description" content="快速启动tftp服务端 1 2 3 pip install py3tftp #使用下面命令即可启动端口是69 udp的 python -m py3tftp 客户端上传文件 1 2 3 4 import tftpy client = tftpy.TftpClient(&#39;192.168.5.xxx&#39;, 69) client.upload(&#39;1.conf&#39;, &#39;1.conf&#39;) 没有任何报错，表示文件上传成功。" /><meta name="keywords" content='linux' /><meta itemprop="name" content="Tftp服务器搭建和使用">
+<meta itemprop="description" content="快速启动tftp服务端 1 2 3 pip install py3tftp #使用下面命令即可启动端口是69 udp的 python -m py3tftp 客户端上传文件 1 2 3 4 import tftpy client = tftpy.TftpClient(&#39;192.168.5.xxx&#39;, 69) client.upload(&#39;1.conf&#39;, &#39;1.conf&#39;) 没有任何报错，表示文件上传成功。"><meta itemprop="datePublished" content="2023-04-18T18:21:58+08:00" />
+<meta itemprop="dateModified" content="2023-04-18T18:21:58+08:00" />
+<meta itemprop="wordCount" content="26">
+<meta itemprop="keywords" content="linux," /><meta property="og:title" content="Tftp服务器搭建和使用" />
+<meta property="og:description" content="快速启动tftp服务端 1 2 3 pip install py3tftp #使用下面命令即可启动端口是69 udp的 python -m py3tftp 客户端上传文件 1 2 3 4 import tftpy client = tftpy.TftpClient(&#39;192.168.5.xxx&#39;, 69) client.upload(&#39;1.conf&#39;, &#39;1.conf&#39;) 没有任何报错，表示文件上传成功。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://qq516249940.github.io/posts/devops/%E8%BF%90%E7%BB%B4%E5%91%8A%E8%AD%A6p1p2p3p4%E4%BB%A3%E8%A1%A8%E4%BB%80%E4%B9%88/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-04-18T10:38:00+08:00" />
-<meta property="article:modified_time" content="2023-04-18T10:38:00+08:00" />
+<meta property="og:url" content="http://qq516249940.github.io/posts/linux/tftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-18T18:21:58+08:00" />
+<meta property="article:modified_time" content="2023-04-18T18:21:58+08:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="运维告警p1,p2,P3,P4代表什么"/>
-<meta name="twitter:description" content="P1、P2、P3、P4 是一种常见的告警级别分类，通常用于指示告警的优先级和紧急程度。以下是这些级别通常所代表的意义：
-P1（严重）：指出现了系统崩溃、关键功能异常或其他严重问题。此时需要立即采取行动，以避免系统出现大规模故障。
-P2（高）：指出现了重要功能异常或其他需要紧急处理的问题。虽然不是系统崩溃，但它会影响业务运作，并且需要迅速解决。
-P3（中）：指出现了较小的问题，可能会造成某些业务的中断，但并不影响整个系统的运行。
-P4（低）：指类似日志记录错误、非关键性的功能异常等问题。它们不会影响业务运行，但是需要记录以供后续分析。
-这些告警级别的使用可以帮助运维人员更好地管理和处理发生的问题，优先处理最严重的问题，提高系统的可靠性和稳定性。同时，对于不同级别的告警，可以设置不同的处理策略和时间目标，以最大化服务水平的维护。"/>
+<meta name="twitter:title" content="Tftp服务器搭建和使用"/>
+<meta name="twitter:description" content="快速启动tftp服务端 1 2 3 pip install py3tftp #使用下面命令即可启动端口是69 udp的 python -m py3tftp 客户端上传文件 1 2 3 4 import tftpy client = tftpy.TftpClient(&#39;192.168.5.xxx&#39;, 69) client.upload(&#39;1.conf&#39;, &#39;1.conf&#39;) 没有任何报错，表示文件上传成功。"/>
 <meta name="application-name" content="FixIt">
 <meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://qq516249940.github.io/posts/devops/%E8%BF%90%E7%BB%B4%E5%91%8A%E8%AD%A6p1p2p3p4%E4%BB%A3%E8%A1%A8%E4%BB%80%E4%B9%88/" /><link rel="prev" href="http://qq516249940.github.io/posts/linux/lftp%E4%BD%BF%E7%94%A8ssh%E5%AF%86%E9%92%A5%E8%BF%9E%E6%8E%A5sftp/" /><link rel="next" href="http://qq516249940.github.io/posts/linux/tftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://qq516249940.github.io/posts/linux/tftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8/" /><link rel="prev" href="http://qq516249940.github.io/posts/devops/%E8%BF%90%E7%BB%B4%E5%91%8A%E8%AD%A6p1p2p3p4%E4%BB%A3%E8%A1%A8%E4%BB%80%E4%B9%88/" /><link rel="next" href="http://qq516249940.github.io/posts/linux/pve%E5%AE%89%E8%A3%85windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%A6%81%E7%82%B9/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "headline": "运维告警p1,p2,P3,P4代表什么",
+    "headline": "Tftp服务器搭建和使用",
     "inLanguage": "en-us",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "http:\/\/qq516249940.github.io\/posts\/devops\/%E8%BF%90%E7%BB%B4%E5%91%8A%E8%AD%A6p1p2p3p4%E4%BB%A3%E8%A1%A8%E4%BB%80%E4%B9%88\/"
-    },"genre": "posts","keywords": "devops","wordcount":  7 ,
-    "url": "http:\/\/qq516249940.github.io\/posts\/devops\/%E8%BF%90%E7%BB%B4%E5%91%8A%E8%AD%A6p1p2p3p4%E4%BB%A3%E8%A1%A8%E4%BB%80%E4%B9%88\/","datePublished": "2023-04-18T10:38:00+08:00","dateModified": "2023-04-18T10:38:00+08:00","publisher": {
+      "@id": "http:\/\/qq516249940.github.io\/posts\/linux\/tftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8\/"
+    },"genre": "posts","keywords": "linux","wordcount":  26 ,
+    "url": "http:\/\/qq516249940.github.io\/posts\/linux\/tftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8\/","datePublished": "2023-04-18T18:21:58+08:00","dateModified": "2023-04-18T18:21:58+08:00","publisher": {
       "@type": "Organization",
       "name": ""},"author": {
         "@type": "Person",
@@ -158,61 +138,86 @@ P4（低）：指类似日志记录错误、非关键性的功能异常等问题
   </div>
   <div class="search-dropdown mobile">
     <div id="search-dropdown-mobile"></div>
-  </div><main class="container" data-page-style="normal"><aside class="toc" id="toc-auto"></aside>
+  </div><main class="container" data-page-style="normal"><aside class="toc" id="toc-auto"><h2 class="toc-title">Contents&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside>
 
   <aside class="aside-custom">
     </aside>
 
   <article class="page single">
     <div class="header"><h1 class="single-title animate__animated animate__flipInX">
-        <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>运维告警p1,p2,P3,P4代表什么</span>
+        <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>Tftp服务器搭建和使用</span>
       </h1></div><div class="post-meta">
       <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
       </span></span>
-          <span class="post-category">included in <a href="/categories/devops/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> devops</a></span></div>
-      <div class="post-meta-line"><span title=2023-04-18&#32;10:38:00><i class="fa-regular fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-18">2023-04-18</time></span>&nbsp;<span><i class="fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i> 7 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw" aria-hidden="true"></i> One minute</span>&nbsp;</div>
-    </div><div class="content" id="content"><p>P1、P2、P3、P4 是一种常见的告警级别分类，通常用于指示告警的优先级和紧急程度。以下是这些级别通常所代表的意义：</p>
-<ul>
-<li>
-<p>P1（严重）：指出现了系统崩溃、关键功能异常或其他严重问题。此时需要立即采取行动，以避免系统出现大规模故障。</p>
-</li>
-<li>
-<p>P2（高）：指出现了重要功能异常或其他需要紧急处理的问题。虽然不是系统崩溃，但它会影响业务运作，并且需要迅速解决。</p>
-</li>
-<li>
-<p>P3（中）：指出现了较小的问题，可能会造成某些业务的中断，但并不影响整个系统的运行。</p>
-</li>
-<li>
-<p>P4（低）：指类似日志记录错误、非关键性的功能异常等问题。它们不会影响业务运行，但是需要记录以供后续分析。</p>
-</li>
-</ul>
-<p>这些告警级别的使用可以帮助运维人员更好地管理和处理发生的问题，优先处理最严重的问题，提高系统的可靠性和稳定性。同时，对于不同级别的告警，可以设置不同的处理策略和时间目标，以最大化服务水平的维护。</p>
+          <span class="post-category">included in <a href="/categories/linux/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> linux</a></span></div>
+      <div class="post-meta-line"><span title=2023-04-18&#32;18:21:58><i class="fa-regular fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-18">2023-04-18</time></span>&nbsp;<span><i class="fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i> 26 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw" aria-hidden="true"></i> One minute</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>Contents</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#快速启动tftp服务端">快速启动tftp服务端</a></li>
+    <li><a href="#客户端上传文件">客户端上传文件</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 id="快速启动tftp服务端">快速启动tftp服务端</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip install py3tftp
+</span></span><span class="line"><span class="cl"><span class="c1">#使用下面命令即可启动端口是69 udp的</span>
+</span></span><span class="line"><span class="cl">python -m py3tftp
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="客户端上传文件">客户端上传文件</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">tftpy</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">client</span> <span class="o">=</span> <span class="n">tftpy</span><span class="o">.</span><span class="n">TftpClient</span><span class="p">(</span><span class="s1">&#39;192.168.5.xxx&#39;</span><span class="p">,</span> <span class="mi">69</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">client</span><span class="o">.</span><span class="n">upload</span><span class="p">(</span><span class="s1">&#39;1.conf&#39;</span><span class="p">,</span> <span class="s1">&#39;1.conf&#39;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>没有任何报错，表示文件上传成功。</p>
 </div><div class="post-footer" id="post-footer">
   <div class="post-info">
     <div class="post-info-line">
       <div class="post-info-mod">
-        <span title=2023-04-18&#32;10:38:00>Updated on 2023-04-18&nbsp;</span>
+        <span title=2023-04-18&#32;18:21:58>Updated on 2023-04-18&nbsp;</span>
       </div></div>
     <div class="post-info-line">
       <div class="post-info-md"></div>
       <div class="post-info-share">
-        <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://qq516249940.github.io/posts/devops/%E8%BF%90%E7%BB%B4%E5%91%8A%E8%AD%A6p1p2p3p4%E4%BB%A3%E8%A1%A8%E4%BB%80%E4%B9%88/" data-title="运维告警p1,p2,P3,P4代表什么" data-hashtags="devops"><i class="fa-brands fa-twitter fa-fw" aria-hidden="true"></i></a>
-  <a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://qq516249940.github.io/posts/devops/%E8%BF%90%E7%BB%B4%E5%91%8A%E8%AD%A6p1p2p3p4%E4%BB%A3%E8%A1%A8%E4%BB%80%E4%B9%88/" data-hashtag="devops"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
-  <a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://qq516249940.github.io/posts/devops/%E8%BF%90%E7%BB%B4%E5%91%8A%E8%AD%A6p1p2p3p4%E4%BB%A3%E8%A1%A8%E4%BB%80%E4%B9%88/" data-title="运维告警p1,p2,P3,P4代表什么"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+        <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://qq516249940.github.io/posts/linux/tftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8/" data-title="Tftp服务器搭建和使用" data-hashtags="linux"><i class="fa-brands fa-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://qq516249940.github.io/posts/linux/tftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8/" data-hashtag="linux"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://qq516249940.github.io/posts/linux/tftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8/" data-title="Tftp服务器搭建和使用"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
   </span>
       </div>
     </div>
   </div>
 
   <div class="post-info-more">
-    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/devops/' class="post-tag">devops</a></section>
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/linux/' class="post-tag">linux</a></section>
     <section>
       <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
     </section>
   </div>
 
-  <div class="post-nav"><a href="/posts/linux/lftp%E4%BD%BF%E7%94%A8ssh%E5%AF%86%E9%92%A5%E8%BF%9E%E6%8E%A5sftp/" class="post-nav-item" rel="prev" title="Lftp使用ssh密钥连接sftp"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Lftp使用ssh密钥连接sftp</a>
-      <a href="/posts/linux/tftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8/" class="post-nav-item" rel="next" title="Tftp服务器搭建和使用">Tftp服务器搭建和使用<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+  <div class="post-nav"><a href="/posts/devops/%E8%BF%90%E7%BB%B4%E5%91%8A%E8%AD%A6p1p2p3p4%E4%BB%A3%E8%A1%A8%E4%BB%80%E4%B9%88/" class="post-nav-item" rel="prev" title="运维告警p1,p2,P3,P4代表什么"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>运维告警p1,p2,P3,P4代表什么</a>
+      <a href="/posts/linux/pve%E5%AE%89%E8%A3%85windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%A6%81%E7%82%B9/" class="post-nav-item" rel="next" title="Pve安装windows虚拟机要点">Pve安装windows虚拟机要点<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></main><footer class="footer">
     <div class="footer-container"><div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.110.0">Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.2.18-RC"><img class="fixit-icon" src="/fixit.min.svg" alt="FixIt logo" />&nbsp;FixIt</a>
