@@ -130,6 +130,12 @@
         <span id="typeit-profile-subtitle" class="typeit"></span></h2><div class="links"><a href="/index.xml" title="RSS"target="_blank" rel="external nofollow noopener noreferrer me"><i class="fa-solid fa-rss fa-fw" aria-hidden="true"></i>
     </a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+    <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/devops/gitlab%E7%9A%84cicd%E4%BE%8B%E5%AD%90/">Gitlab的CICD例子</a>
+  </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      </span></span>&nbsp;<span class="post-publish" title='2023-06-26 11:54:25'>published on <time datetime="2023-06-26">2023-06-26</time></span>&nbsp;<span class="post-category">included in <a href="/categories/devops/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> devops</a></span></div><div class="content"></div><div class="post-footer">
+    <a href="/posts/devops/gitlab%E7%9A%84cicd%E4%BE%8B%E5%AD%90/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/devops/' class="post-tag">devops</a></div></div>
+</article>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
     <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/linux/pve%E5%AE%89%E8%A3%85windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%A6%81%E7%82%B9/">Pve安装windows虚拟机要点</a>
   </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
       </span></span>&nbsp;<span class="post-publish" title='2023-04-23 14:54:20'>published on <time datetime="2023-04-23">2023-04-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/linux/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> linux</a></span></div><div class="content"> 下载virtio-win-0.1.208.iso 开启Qemu Geust Agent 虚拟机里面cmd，services.msc，查看QEMU Guest Agent是否正在运行中。 参考： Proxmox VE 安裝虛擬機：Windows 10 (二) </div><div class="post-footer">
@@ -164,13 +170,6 @@ P4（低）：指类似日志记录错误、非关键性的功能异常等问题
   </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
       </span></span>&nbsp;<span class="post-publish" title='2023-04-13 11:42:24'>published on <time datetime="2023-04-13">2023-04-13</time></span>&nbsp;<span class="post-category">included in <a href="/categories/devops/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> devops</a></span></div><div class="content"> 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 提测内容： 1.每日更新xxxx新增部​分xxxx场景 updatxxxxInterest 2.正常xxxx信息同步job新增部分xxxx场景 updatexxxxStatus 涉及服务： xxxx-backend 代码分支： xxxxx-backend - hotfix-4.1.2-0412 影响范围： xxxjob xxxjob sql脚本及配置：无 </div><div class="post-footer">
     <a href="/posts/devops/%E6%8F%90%E6%B5%8B%E6%A8%A1%E6%9D%BF/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/devops/' class="post-tag">devops</a></div></div>
-</article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-    <span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/devops/%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84agent%E7%9B%91%E6%8E%A7%E6%96%87%E4%BB%B6%E5%8F%98%E5%8C%96/">编写一个简单的agent监控文件变化</a>
-  </h1><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      </span></span>&nbsp;<span class="post-publish" title='2023-04-04 17:27:07'>published on <time datetime="2023-04-04">2023-04-04</time></span>&nbsp;<span class="post-category">included in <a href="/categories/devops/"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> devops</a></span></div><div class="content">本次需求是获取.appjvm文件，监控到有文件变化就发送数据到后端接口,agent是守护进程模式。有两个字段，一个是hostname,一个是文本的内容content。经过后端api解析获取数据
-agent脚本 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 import os import time import requests import socket import logging from watchdog.</div><div class="post-footer">
-    <a href="/posts/devops/%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84agent%E7%9B%91%E6%8E%A7%E6%96%87%E4%BB%B6%E5%8F%98%E5%8C%96/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/devops/' class="post-tag">devops</a><a href='/tags/python/' class="post-tag">python</a></div></div>
 </article>
 <ul class="pagination"><li class="page-item active">
           <span class="page-link">
