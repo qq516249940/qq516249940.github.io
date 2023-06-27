@@ -1,0 +1,795 @@
+<!doctype html><html itemscope itemtype=http://schema.org/WebPage lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=2"><meta name=robots content="noodp"><title>Ubuntu包管理工具nala - 熊仔家族</title><meta name=author content><meta name=author-link content><meta name=description content="A Clean, Elegant but Advanced Hugo Theme for Hugo."><meta name=keywords content="ubuntu"><meta itemprop=name content="Ubuntu包管理工具nala"><meta itemprop=description content><meta itemprop=datePublished content="2023-03-01T17:56:53+08:00"><meta itemprop=dateModified content="2023-03-01T17:56:53+08:00"><meta itemprop=wordCount content="1928"><meta itemprop=keywords content="ubuntu,"><meta property="og:title" content="Ubuntu包管理工具nala"><meta property="og:description" content><meta property="og:type" content="article"><meta property="og:url" content="http://qq516249940.github.io/posts/ubuntu%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7nala/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-03-01T17:56:53+08:00"><meta property="article:modified_time" content="2023-03-01T17:56:53+08:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Ubuntu包管理工具nala"><meta name=twitter:description content><meta name=application-name content="FixIt"><meta name=apple-mobile-web-app-title content="FixIt"><meta name=theme-color data-light=#f8f8f8 data-dark=#252627 content="#f8f8f8"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=canonical href=http://qq516249940.github.io/posts/ubuntu%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7nala/><link rel=prev href=http://qq516249940.github.io/posts/golang%E6%9E%84%E5%BB%BA%E5%9F%BA%E4%BA%8Etag/><link rel=next href=http://qq516249940.github.io/posts/pipx%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/fontawesome-free/all.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Ubuntu包管理工具nala","inLanguage":"en-us","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/qq516249940.github.io\/posts\/ubuntu%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7nala\/"},"genre":"posts","keywords":"ubuntu","wordcount":1928,"url":"http:\/\/qq516249940.github.io\/posts\/ubuntu%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7nala\/","datePublished":"2023-03-01T17:56:53+08:00","dateModified":"2023-03-01T17:56:53+08:00","publisher":{"@type":"Organization","name":""},"author":{"@type":"Person","name":"chunk"},"description":""}</script></head><body data-header-desktop=sticky data-header-mobile=auto><script>(window.localStorage?.getItem("theme")?localStorage.getItem("theme")==="dark":"auto"==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:"auto"==="dark")&&document.body.setAttribute("data-theme","dark")</script><div class=wrapper><header class="desktop animate__faster" id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title=熊仔家族><img loading=lazy src=/fixit.min.svg srcset="/fixit.min.svg, /fixit.min.svg 1.5x, /fixit.min.svg 2x" sizes=auto data-title=熊仔家族 data-alt=熊仔家族 class=logo style="background:url(/svg/loading.min.svg)no-repeat 50%" onload='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e);this.dataset.lazyloaded=""' onerror='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e)'><span class=header-title-pre>666</span><span class=header-title-text>我的 Hugo 123 FixIt 网站</span><span class=header-title-post>555</span></a><span id=typeit-header-subtitle-desktop class="typeit header-subtitle"></span></div><nav><ul class=menu><li class=menu-item><a class=menu-link href=/posts/ title=主题文档><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden=true></i> Posts</a></li><li class=menu-item><a class=menu-link href=/categories/ title=分类><i class="fa-solid fa-th fa-fw fa-sm" aria-hidden=true></i> Categories</a></li><li class=menu-item><a class=menu-link href=/tags/ title=标签><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden=true></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id=search-desktop><input type=text placeholder="Search titles or contents ..." id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=Search><i class="fa-solid fa-search fa-fw" aria-hidden=true></i></a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=Clear><i class="fa-solid fa-times-circle fa-fw" aria-hidden=true></i></a>
+<span class="search-button search-loading" id=search-loading-desktop><i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden=true></i></span></li><li class="menu-item theme-switch" title="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></li></ul></nav></div></header><header class="mobile animate__faster" id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title=熊仔家族><img loading=lazy src=/fixit.min.svg srcset="/fixit.min.svg, /fixit.min.svg 1.5x, /fixit.min.svg 2x" sizes=auto data-title=/fixit.min.svg data-alt=/fixit.min.svg class=logo style="background:url(/svg/loading.min.svg)no-repeat 50%" onload='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e);this.dataset.lazyloaded=""' onerror='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e)'><span class=header-title-pre>666</span><span class=header-title-text>我的 Hugo 123 FixIt 网站</span><span class=header-title-post>555</span></a><span id=typeit-header-subtitle-mobile class="typeit header-subtitle"></span></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><nav><ul class=menu id=menu-mobile><li class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder="Search titles or contents ..." id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=Search><i class="fa-solid fa-search fa-fw" aria-hidden=true></i></a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=Clear><i class="fa-solid fa-times-circle fa-fw" aria-hidden=true></i></a>
+<span class="search-button search-loading" id=search-loading-mobile><i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden=true></i></span></div><a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>Cancel</a></li><li class=menu-item><a class=menu-link href=/posts/ title=主题文档><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden=true></i> Posts</a></li><li class=menu-item><a class=menu-link href=/categories/ title=分类><i class="fa-solid fa-th fa-fw fa-sm" aria-hidden=true></i> Categories</a></li><li class=menu-item><a class=menu-link href=/tags/ title=标签><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden=true></i> Tags</a></li><li class="menu-item theme-switch" title="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></li></ul></nav></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=container data-page-style=normal><aside class=toc id=toc-auto><h2 class=toc-title>Contents&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden=true></i></h2><div class=toc-content id=toc-content-auto></div></aside><aside class=aside-custom></aside><article class="page single"><div class=header><h1 class="single-title animate__animated animate__flipInX"><span title=Repost class=icon-repost><i class="fa-solid fa-share fa-fw" aria-hidden=true></i></span><span>Ubuntu包管理工具nala</span></h1></div><div class=post-meta><div class=post-meta-line><span class=post-author><span class=author><i class="fa-solid fa-user-circle" aria-hidden=true></i>
+chunk</span></span>
+<span class=post-category>included in <a href=/categories/ubuntu/><i class="fa-regular fa-folder fa-fw" aria-hidden=true></i> ubuntu</a></span></div><div class=post-meta-line><span title="2023-03-01 17:56:53"><i class="fa-regular fa-calendar-alt fa-fw" aria-hidden=true></i>&nbsp;<time datetime=2023-03-01>2023-03-01</time></span>&nbsp;<span><i class="fa-solid fa-pencil-alt fa-fw" aria-hidden=true></i> 1928 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw" aria-hidden=true></i> 10 minutes</span>&nbsp;</div></div><div class="details toc" id=toc-static data-kept=false><div class="details-summary toc-title"><span>Contents</span>
+<span><i class="details-icon fa-solid fa-angle-right" aria-hidden=true></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#环境信息>环境信息</a></li><li><a href=#添加需要安装软件的仓库>添加需要安装软件的仓库</a></li><li><a href=#nala安装软件>nala安装软件</a></li></ul></nav></div></div><div class=content id=content><h2 id=环境信息>环境信息</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>            .-/+oossssoo+/-.               chunk@chunk-ThinkPad-X1-Carbon-5th 
+</span></span><span class=line><span class=cl>        <span class=sb>`</span>:+ssssssssssssssssss+:<span class=sb>`</span>           ---------------------------------- 
+</span></span><span class=line><span class=cl>      -+ssssssssssssssssssyyssss+-         OS: Ubuntu 22.04.2 LTS x86_64 
+</span></span><span class=line><span class=cl>    .ossssssssssssssssssdMMMNysssso.       Host: 20HRS15700 ThinkPad X1 Carbon 5th 
+</span></span><span class=line><span class=cl>   /ssssssssssshdmmNNmmyNMMMMhssssss/      Kernel: 5.19.0-32-generic 
+</span></span><span class=line><span class=cl>  +ssssssssshmydMMMMMMMNddddyssssssss+     Uptime: <span class=m>9</span> days, <span class=m>8</span> hours, <span class=m>18</span> mins 
+</span></span><span class=line><span class=cl> /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/    Packages: <span class=m>3600</span> <span class=o>(</span>dpkg<span class=o>)</span>, <span class=m>7</span> <span class=o>(</span>flatpak<span class=o>)</span>, <span class=m>27</span> <span class=o>(</span>snap<span class=o>)</span> 
+</span></span><span class=line><span class=cl>.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Shell: zsh 5.8.1 
+</span></span><span class=line><span class=cl>+sssshhhyNMMNyssssssssssssyNMMMysssssss+   Resolution: 1920x1080 
+</span></span><span class=line><span class=cl>ossyNMMMNyMMhsssssssssssssshmmmhssssssso   DE: GNOME 
+</span></span><span class=line><span class=cl>ossyNMMMNyMMhsssssssssssssshmmmhssssssso   WM: Mutter 
+</span></span><span class=line><span class=cl>+sssshhhyNMMNyssssssssssssyNMMMysssssss+   WM Theme: Adwaita 
+</span></span><span class=line><span class=cl>.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Theme: Yaru <span class=o>[</span>GTK2/3<span class=o>]</span> 
+</span></span><span class=line><span class=cl> /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/    Icons: Yaru <span class=o>[</span>GTK2/3<span class=o>]</span> 
+</span></span><span class=line><span class=cl>  +sssssssssdmydMMMMMMMMddddyssssssss+     Terminal: gnome-terminal 
+</span></span><span class=line><span class=cl>   /ssssssssssshdmNNNNmyNMMMMhssssss/      CPU: Intel i7-7500U <span class=o>(</span>4<span class=o>)</span> @ 3.500GHz 
+</span></span><span class=line><span class=cl>    .ossssssssssssssssssdMMMNysssso.       GPU: Intel HD Graphics <span class=m>620</span> 
+</span></span><span class=line><span class=cl>      -+sssssssssssssssssyyyssss+-         Memory: 12136MiB / 15760MiB 
+</span></span><span class=line><span class=cl>        <span class=sb>`</span>:+ssssssssssssssssss+:<span class=sb>`</span>
+</span></span><span class=line><span class=cl>            .-/+oossssoo+/-.                                       
+</span></span><span class=line><span class=cl>                                                                   
+</span></span></code></pre></td></tr></table></div></div><h2 id=添加需要安装软件的仓库>添加需要安装软件的仓库</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl> sudo add-apt-repository ppa:phoerious/keepassxc<span class=se>\n</span>
+</span></span><span class=line><span class=cl> sudo apt update<span class=se>\n</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=nala安装软件>nala安装软件</h2><p>试用了一下nala,安装软件速度真的有点快</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>  1
+</span><span class=lnt>  2
+</span><span class=lnt>  3
+</span><span class=lnt>  4
+</span><span class=lnt>  5
+</span><span class=lnt>  6
+</span><span class=lnt>  7
+</span><span class=lnt>  8
+</span><span class=lnt>  9
+</span><span class=lnt> 10
+</span><span class=lnt> 11
+</span><span class=lnt> 12
+</span><span class=lnt> 13
+</span><span class=lnt> 14
+</span><span class=lnt> 15
+</span><span class=lnt> 16
+</span><span class=lnt> 17
+</span><span class=lnt> 18
+</span><span class=lnt> 19
+</span><span class=lnt> 20
+</span><span class=lnt> 21
+</span><span class=lnt> 22
+</span><span class=lnt> 23
+</span><span class=lnt> 24
+</span><span class=lnt> 25
+</span><span class=lnt> 26
+</span><span class=lnt> 27
+</span><span class=lnt> 28
+</span><span class=lnt> 29
+</span><span class=lnt> 30
+</span><span class=lnt> 31
+</span><span class=lnt> 32
+</span><span class=lnt> 33
+</span><span class=lnt> 34
+</span><span class=lnt> 35
+</span><span class=lnt> 36
+</span><span class=lnt> 37
+</span><span class=lnt> 38
+</span><span class=lnt> 39
+</span><span class=lnt> 40
+</span><span class=lnt> 41
+</span><span class=lnt> 42
+</span><span class=lnt> 43
+</span><span class=lnt> 44
+</span><span class=lnt> 45
+</span><span class=lnt> 46
+</span><span class=lnt> 47
+</span><span class=lnt> 48
+</span><span class=lnt> 49
+</span><span class=lnt> 50
+</span><span class=lnt> 51
+</span><span class=lnt> 52
+</span><span class=lnt> 53
+</span><span class=lnt> 54
+</span><span class=lnt> 55
+</span><span class=lnt> 56
+</span><span class=lnt> 57
+</span><span class=lnt> 58
+</span><span class=lnt> 59
+</span><span class=lnt> 60
+</span><span class=lnt> 61
+</span><span class=lnt> 62
+</span><span class=lnt> 63
+</span><span class=lnt> 64
+</span><span class=lnt> 65
+</span><span class=lnt> 66
+</span><span class=lnt> 67
+</span><span class=lnt> 68
+</span><span class=lnt> 69
+</span><span class=lnt> 70
+</span><span class=lnt> 71
+</span><span class=lnt> 72
+</span><span class=lnt> 73
+</span><span class=lnt> 74
+</span><span class=lnt> 75
+</span><span class=lnt> 76
+</span><span class=lnt> 77
+</span><span class=lnt> 78
+</span><span class=lnt> 79
+</span><span class=lnt> 80
+</span><span class=lnt> 81
+</span><span class=lnt> 82
+</span><span class=lnt> 83
+</span><span class=lnt> 84
+</span><span class=lnt> 85
+</span><span class=lnt> 86
+</span><span class=lnt> 87
+</span><span class=lnt> 88
+</span><span class=lnt> 89
+</span><span class=lnt> 90
+</span><span class=lnt> 91
+</span><span class=lnt> 92
+</span><span class=lnt> 93
+</span><span class=lnt> 94
+</span><span class=lnt> 95
+</span><span class=lnt> 96
+</span><span class=lnt> 97
+</span><span class=lnt> 98
+</span><span class=lnt> 99
+</span><span class=lnt>100
+</span><span class=lnt>101
+</span><span class=lnt>102
+</span><span class=lnt>103
+</span><span class=lnt>104
+</span><span class=lnt>105
+</span><span class=lnt>106
+</span><span class=lnt>107
+</span><span class=lnt>108
+</span><span class=lnt>109
+</span><span class=lnt>110
+</span><span class=lnt>111
+</span><span class=lnt>112
+</span><span class=lnt>113
+</span><span class=lnt>114
+</span><span class=lnt>115
+</span><span class=lnt>116
+</span><span class=lnt>117
+</span><span class=lnt>118
+</span><span class=lnt>119
+</span><span class=lnt>120
+</span><span class=lnt>121
+</span><span class=lnt>122
+</span><span class=lnt>123
+</span><span class=lnt>124
+</span><span class=lnt>125
+</span><span class=lnt>126
+</span><span class=lnt>127
+</span><span class=lnt>128
+</span><span class=lnt>129
+</span><span class=lnt>130
+</span><span class=lnt>131
+</span><span class=lnt>132
+</span><span class=lnt>133
+</span><span class=lnt>134
+</span><span class=lnt>135
+</span><span class=lnt>136
+</span><span class=lnt>137
+</span><span class=lnt>138
+</span><span class=lnt>139
+</span><span class=lnt>140
+</span><span class=lnt>141
+</span><span class=lnt>142
+</span><span class=lnt>143
+</span><span class=lnt>144
+</span><span class=lnt>145
+</span><span class=lnt>146
+</span><span class=lnt>147
+</span><span class=lnt>148
+</span><span class=lnt>149
+</span><span class=lnt>150
+</span><span class=lnt>151
+</span><span class=lnt>152
+</span><span class=lnt>153
+</span><span class=lnt>154
+</span><span class=lnt>155
+</span><span class=lnt>156
+</span><span class=lnt>157
+</span><span class=lnt>158
+</span><span class=lnt>159
+</span><span class=lnt>160
+</span><span class=lnt>161
+</span><span class=lnt>162
+</span><span class=lnt>163
+</span><span class=lnt>164
+</span><span class=lnt>165
+</span><span class=lnt>166
+</span><span class=lnt>167
+</span><span class=lnt>168
+</span><span class=lnt>169
+</span><span class=lnt>170
+</span><span class=lnt>171
+</span><span class=lnt>172
+</span><span class=lnt>173
+</span><span class=lnt>174
+</span><span class=lnt>175
+</span><span class=lnt>176
+</span><span class=lnt>177
+</span><span class=lnt>178
+</span><span class=lnt>179
+</span><span class=lnt>180
+</span><span class=lnt>181
+</span><span class=lnt>182
+</span><span class=lnt>183
+</span><span class=lnt>184
+</span><span class=lnt>185
+</span><span class=lnt>186
+</span><span class=lnt>187
+</span><span class=lnt>188
+</span><span class=lnt>189
+</span><span class=lnt>190
+</span><span class=lnt>191
+</span><span class=lnt>192
+</span><span class=lnt>193
+</span><span class=lnt>194
+</span><span class=lnt>195
+</span><span class=lnt>196
+</span><span class=lnt>197
+</span><span class=lnt>198
+</span><span class=lnt>199
+</span><span class=lnt>200
+</span><span class=lnt>201
+</span><span class=lnt>202
+</span><span class=lnt>203
+</span><span class=lnt>204
+</span><span class=lnt>205
+</span><span class=lnt>206
+</span><span class=lnt>207
+</span><span class=lnt>208
+</span><span class=lnt>209
+</span><span class=lnt>210
+</span><span class=lnt>211
+</span><span class=lnt>212
+</span><span class=lnt>213
+</span><span class=lnt>214
+</span><span class=lnt>215
+</span><span class=lnt>216
+</span><span class=lnt>217
+</span><span class=lnt>218
+</span><span class=lnt>219
+</span><span class=lnt>220
+</span><span class=lnt>221
+</span><span class=lnt>222
+</span><span class=lnt>223
+</span><span class=lnt>224
+</span><span class=lnt>225
+</span><span class=lnt>226
+</span><span class=lnt>227
+</span><span class=lnt>228
+</span><span class=lnt>229
+</span><span class=lnt>230
+</span><span class=lnt>231
+</span><span class=lnt>232
+</span><span class=lnt>233
+</span><span class=lnt>234
+</span><span class=lnt>235
+</span><span class=lnt>236
+</span><span class=lnt>237
+</span><span class=lnt>238
+</span><span class=lnt>239
+</span><span class=lnt>240
+</span><span class=lnt>241
+</span><span class=lnt>242
+</span><span class=lnt>243
+</span><span class=lnt>244
+</span><span class=lnt>245
+</span><span class=lnt>246
+</span><span class=lnt>247
+</span><span class=lnt>248
+</span><span class=lnt>249
+</span><span class=lnt>250
+</span><span class=lnt>251
+</span><span class=lnt>252
+</span><span class=lnt>253
+</span><span class=lnt>254
+</span><span class=lnt>255
+</span><span class=lnt>256
+</span><span class=lnt>257
+</span><span class=lnt>258
+</span><span class=lnt>259
+</span><span class=lnt>260
+</span><span class=lnt>261
+</span><span class=lnt>262
+</span><span class=lnt>263
+</span><span class=lnt>264
+</span><span class=lnt>265
+</span><span class=lnt>266
+</span><span class=lnt>267
+</span><span class=lnt>268
+</span><span class=lnt>269
+</span><span class=lnt>270
+</span><span class=lnt>271
+</span><span class=lnt>272
+</span><span class=lnt>273
+</span><span class=lnt>274
+</span><span class=lnt>275
+</span><span class=lnt>276
+</span><span class=lnt>277
+</span><span class=lnt>278
+</span><span class=lnt>279
+</span><span class=lnt>280
+</span><span class=lnt>281
+</span><span class=lnt>282
+</span><span class=lnt>283
+</span><span class=lnt>284
+</span><span class=lnt>285
+</span><span class=lnt>286
+</span><span class=lnt>287
+</span><span class=lnt>288
+</span><span class=lnt>289
+</span><span class=lnt>290
+</span><span class=lnt>291
+</span><span class=lnt>292
+</span><span class=lnt>293
+</span><span class=lnt>294
+</span><span class=lnt>295
+</span><span class=lnt>296
+</span><span class=lnt>297
+</span><span class=lnt>298
+</span><span class=lnt>299
+</span><span class=lnt>300
+</span><span class=lnt>301
+</span><span class=lnt>302
+</span><span class=lnt>303
+</span><span class=lnt>304
+</span><span class=lnt>305
+</span><span class=lnt>306
+</span><span class=lnt>307
+</span><span class=lnt>308
+</span><span class=lnt>309
+</span><span class=lnt>310
+</span><span class=lnt>311
+</span><span class=lnt>312
+</span><span class=lnt>313
+</span><span class=lnt>314
+</span><span class=lnt>315
+</span><span class=lnt>316
+</span><span class=lnt>317
+</span><span class=lnt>318
+</span><span class=lnt>319
+</span><span class=lnt>320
+</span><span class=lnt>321
+</span><span class=lnt>322
+</span><span class=lnt>323
+</span><span class=lnt>324
+</span><span class=lnt>325
+</span><span class=lnt>326
+</span><span class=lnt>327
+</span><span class=lnt>328
+</span><span class=lnt>329
+</span><span class=lnt>330
+</span><span class=lnt>331
+</span><span class=lnt>332
+</span><span class=lnt>333
+</span><span class=lnt>334
+</span><span class=lnt>335
+</span><span class=lnt>336
+</span><span class=lnt>337
+</span><span class=lnt>338
+</span><span class=lnt>339
+</span><span class=lnt>340
+</span><span class=lnt>341
+</span><span class=lnt>342
+</span><span class=lnt>343
+</span><span class=lnt>344
+</span><span class=lnt>345
+</span><span class=lnt>346
+</span><span class=lnt>347
+</span><span class=lnt>348
+</span><span class=lnt>349
+</span><span class=lnt>350
+</span><span class=lnt>351
+</span><span class=lnt>352
+</span><span class=lnt>353
+</span><span class=lnt>354
+</span><span class=lnt>355
+</span><span class=lnt>356
+</span><span class=lnt>357
+</span><span class=lnt>358
+</span><span class=lnt>359
+</span><span class=lnt>360
+</span><span class=lnt>361
+</span><span class=lnt>362
+</span><span class=lnt>363
+</span><span class=lnt>364
+</span><span class=lnt>365
+</span><span class=lnt>366
+</span><span class=lnt>367
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl> chunk@chunk-ThinkPad-X1-Carbon-5th  ~/code/github/quickstart   master ±✚  sudo nala install keepassxc --no-autoremove
+</span></span><span class=line><span class=cl><span class=o>===================================================================================================================================================================================================================</span>
+</span></span><span class=line><span class=cl> Auto-Removable, Will Not Be <span class=nv>Removed</span>                                                                                                                                                                               
+</span></span><span class=line><span class=cl><span class=o>===================================================================================================================================================================================================================</span>
+</span></span><span class=line><span class=cl>  Package:                                                              Version:                                                                                                                            Size:  
+</span></span><span class=line><span class=cl>  fcitx-config-common                                                   0.4.10-3                                                                                                                            <span class=m>58</span> KB  
+</span></span><span class=line><span class=cl>  fcitx-config-gtk                                                      0.4.10-3                                                                                                                           <span class=m>138</span> KB  
+</span></span><span class=line><span class=cl>  fcitx-module-quickphrase-editor5                                      1.2.7-1.2build1                                                                                                                    <span class=m>146</span> KB  
+</span></span><span class=line><span class=cl>  gstreamer1.0-plugins-base:i386                                        1.20.1-1                                                                                                                           2.7 MB  
+</span></span><span class=line><span class=cl>  gyp                                                                   0.1+20210831gitd6c5dd5-5                                                                                                           1.2 MB  
+</span></span><span class=line><span class=cl>  krb5-config                                                           2.6+nmu1ubuntu1                                                                                                                     <span class=m>63</span> KB  
+</span></span><span class=line><span class=cl>  libapparmor1:i386                                                     3.0.4-2ubuntu2.1                                                                                                                   <span class=m>177</span> KB  
+</span></span><span class=line><span class=cl>  libasn1-8-heimdal:i386                                                7.7.0+dfsg-3ubuntu1                                                                                                                <span class=m>873</span> KB  
+</span></span><span class=line><span class=cl>  libasound2-plugins:i386                                               1.2.6-1                                                                                                                            <span class=m>328</span> KB  
+</span></span><span class=line><span class=cl>  libasound2:i386                                                       1.2.6.1-1ubuntu1                                                                                                                   1.3 MB  
+</span></span><span class=line><span class=cl>  libasyncns0:i386                                                      0.8-6build2                                                                                                                         <span class=m>44</span> KB  
+</span></span><span class=line><span class=cl>  libatk-bridge2.0-0:i386                                               2.38.0-3                                                                                                                           <span class=m>265</span> KB  
+</span></span><span class=line><span class=cl>  libatk1.0-0:i386                                                      2.36.0-3build1                                                                                                                     <span class=m>203</span> KB  
+</span></span><span class=line><span class=cl>  libatomic1:i386                                                       12.1.0-2ubuntu1~22.04                                                                                                               <span class=m>41</span> KB  
+</span></span><span class=line><span class=cl>  libatspi2.0-0:i386                                                    2.44.0-3                                                                                                                           <span class=m>272</span> KB  
+</span></span><span class=line><span class=cl>  libavahi-client3:i386                                                 0.8-5ubuntu5                                                                                                                       <span class=m>147</span> KB  
+</span></span><span class=line><span class=cl>  libavahi-common-data:i386                                             0.8-5ubuntu5                                                                                                                       <span class=m>119</span> KB  
+</span></span><span class=line><span class=cl>  libavahi-common3:i386                                                 0.8-5ubuntu5                                                                                                                       <span class=m>120</span> KB  
+</span></span><span class=line><span class=cl>  libbrotli1:i386                                                       1.0.9-2build6                                                                                                                      <span class=m>812</span> KB  
+</span></span><span class=line><span class=cl>  libbsd0:i386                                                          0.11.5-1                                                                                                                           <span class=m>142</span> KB  
+</span></span><span class=line><span class=cl>  libcairo-gobject2:i386                                                1.16.0-5ubuntu2                                                                                                                     <span class=m>96</span> KB  
+</span></span><span class=line><span class=cl>  libcairo2:i386                                                        1.16.0-5ubuntu2                                                                                                                    1.6 MB  
+</span></span><span class=line><span class=cl>  libcapi20-3:i386                                                      1:3.27-3                                                                                                                           <span class=m>108</span> KB  
+</span></span><span class=line><span class=cl>  libcdparanoia0:i386                                                   3.10.2+debian-14build2                                                                                                             <span class=m>147</span> KB  
+</span></span><span class=line><span class=cl>  libcolord2:i386                                                       1.4.6-1                                                                                                                            <span class=m>694</span> KB  
+</span></span><span class=line><span class=cl>  libcups2:i386                                                         2.4.1op1-1ubuntu4.1                                                                                                                <span class=m>858</span> KB  
+</span></span><span class=line><span class=cl>  libdatrie1:i386                                                       0.2.13-2                                                                                                                            <span class=m>68</span> KB  
+</span></span><span class=line><span class=cl>  libdecor-0-0:i386                                                     0.1.0-3build1                                                                                                                       <span class=m>53</span> KB  
+</span></span><span class=line><span class=cl>  libdecor-0-plugin-1-cairo:i386                                        0.1.0-3build1                                                                                                                       <span class=m>66</span> KB  
+</span></span><span class=line><span class=cl>  libdeflate0:i386                                                      1.10-2                                                                                                                             <span class=m>144</span> KB  
+</span></span><span class=line><span class=cl>  libdrm-amdgpu1:i386                                                   2.4.113-2~ubuntu0.22.04.1                                                                                                           <span class=m>89</span> KB  
+</span></span><span class=line><span class=cl>  libdrm2:i386                                                          2.4.113-2~ubuntu0.22.04.1                                                                                                          <span class=m>142</span> KB  
+</span></span><span class=line><span class=cl>  libdw1:i386                                                           0.186-1build1                                                                                                                      <span class=m>777</span> KB  
+</span></span><span class=line><span class=cl>  libedit2:i386                                                         3.1-20210910-1build1                                                                                                               <span class=m>269</span> KB  
+</span></span><span class=line><span class=cl>  libelf1:i386                                                          0.186-1build1                                                                                                                      <span class=m>197</span> KB  
+</span></span><span class=line><span class=cl>  libepoxy0:i386                                                        1.5.10-1                                                                                                                           1.3 MB  
+</span></span><span class=line><span class=cl>  libexif12:i386                                                        0.6.24-1build1                                                                                                                     <span class=m>352</span> KB  
+</span></span><span class=line><span class=cl>  libexpat1:i386                                                        2.4.7-1ubuntu0.2                                                                                                                   <span class=m>433</span> KB  
+</span></span><span class=line><span class=cl>  libfcitx-config4                                                      1:4.2.9.8-5                                                                                                                        <span class=m>136</span> KB  
+</span></span><span class=line><span class=cl>  libfcitx-core0                                                        1:4.2.9.8-5                                                                                                                        <span class=m>180</span> KB  
+</span></span><span class=line><span class=cl>  libfcitx-gclient1                                                     1:4.2.9.8-5                                                                                                                         <span class=m>95</span> KB  
+</span></span><span class=line><span class=cl>  libfcitx-qt5-1                                                        1.2.7-1.2build1                                                                                                                    <span class=m>307</span> KB  
+</span></span><span class=line><span class=cl>  libfcitx-qt5-data                                                     1.2.7-1.2build1                                                                                                                     <span class=m>61</span> KB  
+</span></span><span class=line><span class=cl>  libfcitx-utils0                                                       1:4.2.9.8-5                                                                                                                        <span class=m>125</span> KB  
+</span></span><span class=line><span class=cl>  libffi8:i386                                                          3.4.2-4                                                                                                                             <span class=m>66</span> KB  
+</span></span><span class=line><span class=cl>  libflac8:i386                                                         1.3.3-2ubuntu0.1                                                                                                                   <span class=m>288</span> KB  
+</span></span><span class=line><span class=cl>  libflashrom1                                                          1.2-5build1                                                                                                                        <span class=m>890</span> KB  
+</span></span><span class=line><span class=cl>  libfontconfig1:i386                                                   2.13.1-4.2ubuntu5                                                                                                                  <span class=m>361</span> KB  
+</span></span><span class=line><span class=cl>  libfreetype6:i386                                                     2.11.1+dfsg-1ubuntu0.1                                                                                                             <span class=m>910</span> KB  
+</span></span><span class=line><span class=cl>  libfribidi0:i386                                                      1.0.8-2ubuntu3.1                                                                                                                   <span class=m>138</span> KB  
+</span></span><span class=line><span class=cl>  libftdi1-2                                                            1.5-5build3                                                                                                                         <span class=m>83</span> KB  
+</span></span><span class=line><span class=cl>  libgbm1:i386                                                          22.2.5-0ubuntu0.1~22.04.1                                                                                                          <span class=m>151</span> KB  
+</span></span><span class=line><span class=cl>  libgd3:i386                                                           2.3.0-2ubuntu2                                                                                                                     <span class=m>468</span> KB  
+</span></span><span class=line><span class=cl>  libgdbm-compat4:i386                                                  1.23-1                                                                                                                              <span class=m>50</span> KB  
+</span></span><span class=line><span class=cl>  libgdbm6:i386                                                         1.23-1                                                                                                                             <span class=m>114</span> KB  
+</span></span><span class=line><span class=cl>  libgdk-pixbuf-2.0-0:i386                                              2.42.8+dfsg-1ubuntu0.2                                                                                                             <span class=m>531</span> KB  
+</span></span><span class=line><span class=cl>  libgdk-pixbuf-xlib-2.0-0:i386                                         2.40.2-2build4                                                                                                                     <span class=m>105</span> KB  
+</span></span><span class=line><span class=cl>  libgdk-pixbuf2.0-0:i386                                               2.40.2-2build4                                                                                                                      <span class=m>23</span> KB  
+</span></span><span class=line><span class=cl>  libgettextpo0                                                         0.21-4ubuntu4                                                                                                                      <span class=m>413</span> KB  
+</span></span><span class=line><span class=cl>  libglapi-mesa:i386                                                    22.2.5-0ubuntu0.1~22.04.1                                                                                                          <span class=m>243</span> KB  
+</span></span><span class=line><span class=cl>  libglib2.0-0:i386                                                     2.72.4-0ubuntu1                                                                                                                    4.8 MB  
+</span></span><span class=line><span class=cl>  libglu1-mesa:i386                                                     9.0.2-1                                                                                                                            <span class=m>534</span> KB  
+</span></span><span class=line><span class=cl>  libglvnd0:i386                                                        1.4.0-1                                                                                                                            <span class=m>516</span> KB  
+</span></span><span class=line><span class=cl>  libgnutls30:i386                                                      3.7.3-4ubuntu1.1                                                                                                                   2.6 MB  
+</span></span><span class=line><span class=cl>  libgphoto2-port12:i386                                                2.5.27-1build2                                                                                                                     <span class=m>319</span> KB  
+</span></span><span class=line><span class=cl>  libgraphite2-3:i386                                                   1.3.14-1build2                                                                                                                     <span class=m>199</span> KB  
+</span></span><span class=line><span class=cl>  libgsm1:i386                                                          1.0.19-1                                                                                                                            <span class=m>94</span> KB  
+</span></span><span class=line><span class=cl>  libgssapi3-heimdal:i386                                               7.7.0+dfsg-3ubuntu1                                                                                                                <span class=m>354</span> KB  
+</span></span><span class=line><span class=cl>  libgssrpc4                                                            1.19.2-2ubuntu0.1                                                                                                                  <span class=m>237</span> KB  
+</span></span><span class=line><span class=cl>  libgstreamer-plugins-base1.0-0:i386                                   1.20.1-1                                                                                                                           3.0 MB  
+</span></span><span class=line><span class=cl>  libgstreamer1.0-0:i386                                                1.20.3-0ubuntu1                                                                                                                    3.5 MB  
+</span></span><span class=line><span class=cl>  libgtk-3-0:i386                                                       3.24.33-1ubuntu2                                                                                                                  11.8 MB  
+</span></span><span class=line><span class=cl>  libharfbuzz0b:i386                                                    2.7.4-1ubuntu3.1                                                                                                                   1.1 MB  
+</span></span><span class=line><span class=cl>  libhcrypto4-heimdal:i386                                              7.7.0+dfsg-3ubuntu1                                                                                                                <span class=m>313</span> KB  
+</span></span><span class=line><span class=cl>  libheimbase1-heimdal:i386                                             7.7.0+dfsg-3ubuntu1                                                                                                                <span class=m>119</span> KB  
+</span></span><span class=line><span class=cl>  libheimntlm0-heimdal:i386                                             7.7.0+dfsg-3ubuntu1                                                                                                                 <span class=m>87</span> KB  
+</span></span><span class=line><span class=cl>  libhogweed6:i386                                                      3.7.3-1build2                                                                                                                      <span class=m>349</span> KB  
+</span></span><span class=line><span class=cl>  libhx509-5-heimdal:i386                                               7.7.0+dfsg-3ubuntu1                                                                                                                <span class=m>388</span> KB  
+</span></span><span class=line><span class=cl>  libicu70:i386                                                         70.1-2                                                                                                                            35.5 MB  
+</span></span><span class=line><span class=cl>  libieee1284-3:i386                                                    0.2.11-14build2                                                                                                                     <span class=m>80</span> KB  
+</span></span><span class=line><span class=cl>  libjack0:i386                                                         1:0.125.0-3build2                                                                                                                  <span class=m>371</span> KB  
+</span></span><span class=line><span class=cl>  libjbig0:i386                                                         2.1-3.1ubuntu0.22.04.1                                                                                                              <span class=m>79</span> KB  
+</span></span><span class=line><span class=cl>  libjpeg-turbo8:i386                                                   2.1.2-0ubuntu1                                                                                                                     <span class=m>621</span> KB  
+</span></span><span class=line><span class=cl>  libjpeg8:i386                                                         8c-2ubuntu10                                                                                                                         <span class=m>9</span> KB  
+</span></span><span class=line><span class=cl>  libjs-events                                                          3.3.0+~3.0.0-2                                                                                                                      <span class=m>44</span> KB  
+</span></span><span class=line><span class=cl>  libjs-highlight.js                                                    9.18.5+dfsg1-1                                                                                                                     2.2 MB  
+</span></span><span class=line><span class=cl>  libjs-inherits                                                        2.0.4-4                                                                                                                             <span class=m>12</span> KB  
+</span></span><span class=line><span class=cl>  libjs-is-typedarray                                                   1.0.0-4                                                                                                                             <span class=m>14</span> KB  
+</span></span><span class=line><span class=cl>  libjs-psl                                                             1.8.0+ds-6                                                                                                                         <span class=m>316</span> KB  
+</span></span><span class=line><span class=cl>  libjs-source-map                                                      0.7.0++dfsg2+really.0.6.1-9                                                                                                        <span class=m>577</span> KB  
+</span></span><span class=line><span class=cl>  libjs-sprintf-js                                                      1.1.2+ds1+~1.1.2-1                                                                                                                  <span class=m>46</span> KB  
+</span></span><span class=line><span class=cl>  libjs-typedarray-to-buffer                                            4.0.0-2                                                                                                                             <span class=m>17</span> KB  
+</span></span><span class=line><span class=cl>  libkadm5clnt-mit12                                                    1.19.2-2ubuntu0.1                                                                                                                  <span class=m>210</span> KB  
+</span></span><span class=line><span class=cl>  libkadm5srv-mit12                                                     1.19.2-2ubuntu0.1                                                                                                                  <span class=m>231</span> KB  
+</span></span><span class=line><span class=cl>  libkdb5-10                                                            1.19.2-2ubuntu0.1                                                                                                                  <span class=m>187</span> KB  
+</span></span><span class=line><span class=cl>  libkrb5-26-heimdal:i386                                               7.7.0+dfsg-3ubuntu1                                                                                                                <span class=m>743</span> KB  
+</span></span><span class=line><span class=cl>  liblcms2-2:i386                                                       2.12~rc1-2build2                                                                                                                   <span class=m>456</span> KB  
+</span></span><span class=line><span class=cl>  libllvm13                                                             1:13.0.1-2ubuntu2.1                                                                                                               99.9 MB  
+</span></span><span class=line><span class=cl>  libllvm13:i386                                                        1:13.0.1-2ubuntu2.1                                                                                                               94.1 MB  
+</span></span><span class=line><span class=cl>  libllvm15:i386                                                        1:15.0.6-3~ubuntu0.22.04.2                                                                                                       127.5 MB  
+</span></span><span class=line><span class=cl>  libltdl7:i386                                                         2.4.6-15build2                                                                                                                     <span class=m>436</span> KB  
+</span></span><span class=line><span class=cl>  libmd0:i386                                                           1.0.4-1build1                                                                                                                       <span class=m>76</span> KB  
+</span></span><span class=line><span class=cl>  libmpg123-0:i386                                                      1.29.3-1build1                                                                                                                     <span class=m>451</span> KB  
+</span></span><span class=line><span class=cl>  libmysqlclient21                                                      8.0.32-0ubuntu0.22.04.2                                                                                                            6.9 MB  
+</span></span><span class=line><span class=cl>  libnetsnmptrapd40                                                     5.9.1+dfsg-1ubuntu2.4                                                                                                               <span class=m>76</span> KB  
+</span></span><span class=line><span class=cl>  libnettle8:i386                                                       3.7.3-1build2                                                                                                                      <span class=m>380</span> KB  
+</span></span><span class=line><span class=cl>  libnghttp2-14:i386                                                    1.43.0-1build3                                                                                                                     <span class=m>240</span> KB  
+</span></span><span class=line><span class=cl>  libnspr4:i386                                                         2:4.32-3build1                                                                                                                     <span class=m>342</span> KB  
+</span></span><span class=line><span class=cl>  libnss3:i386                                                          2:3.68.2-0ubuntu1.2                                                                                                                4.5 MB  
+</span></span><span class=line><span class=cl>  libodbc1:i386                                                         2.3.9-5                                                                                                                             <span class=m>29</span> KB  
+</span></span><span class=line><span class=cl>  libodbc2:i386                                                         2.3.9-5                                                                                                                            <span class=m>571</span> KB  
+</span></span><span class=line><span class=cl>  libodbccr2:i386                                                       2.3.9-5                                                                                                                             <span class=m>74</span> KB  
+</span></span><span class=line><span class=cl>  libogg0:i386                                                          1.3.5-0ubuntu3                                                                                                                      <span class=m>63</span> KB  
+</span></span><span class=line><span class=cl>  libopenal1:i386                                                       1:1.19.1-2build3                                                                                                                   1.1 MB  
+</span></span><span class=line><span class=cl>  libopengl0:i386                                                       1.4.0-1                                                                                                                            <span class=m>187</span> KB  
+</span></span><span class=line><span class=cl>  libopenjp2-7:i386                                                     2.4.0-6                                                                                                                            <span class=m>477</span> KB  
+</span></span><span class=line><span class=cl>  libopus0:i386                                                         1.3.1-0.1build2                                                                                                                    <span class=m>404</span> KB  
+</span></span><span class=line><span class=cl>  liborc-0.4-0:i386                                                     1:0.4.32-2                                                                                                                         1.3 MB  
+</span></span><span class=line><span class=cl>  libosmesa6:i386                                                       22.2.5-0ubuntu0.1~22.04.1                                                                                                         12.4 MB  
+</span></span><span class=line><span class=cl>  libp11-kit0:i386                                                      0.24.0-6build1                                                                                                                     1.5 MB  
+</span></span><span class=line><span class=cl>  libpango-1.0-0:i386                                                   1.50.6+ds-2                                                                                                                        <span class=m>612</span> KB  
+</span></span><span class=line><span class=cl>  libpangocairo-1.0-0:i386                                              1.50.6+ds-2                                                                                                                        <span class=m>158</span> KB  
+</span></span><span class=line><span class=cl>  libpangoft2-1.0-0:i386                                                1.50.6+ds-2                                                                                                                        <span class=m>210</span> KB  
+</span></span><span class=line><span class=cl>  libpcap0.8:i386                                                       1.10.1-4build1                                                                                                                     <span class=m>381</span> KB  
+</span></span><span class=line><span class=cl>  libpci-dev                                                            1:3.7.0-6                                                                                                                          <span class=m>123</span> KB  
+</span></span><span class=line><span class=cl>  libpci3:i386                                                          1:3.7.0-6                                                                                                                           <span class=m>95</span> KB  
+</span></span><span class=line><span class=cl>  libperl5.34:i386                                                      5.34.0-3ubuntu1.1                                                                                                                 23.4 MB  
+</span></span><span class=line><span class=cl>  libpixman-1-0:i386                                                    0.40.0-1ubuntu0.22.04.1                                                                                                            <span class=m>744</span> KB  
+</span></span><span class=line><span class=cl>  libpng16-16:i386                                                      1.6.37-3build5                                                                                                                     <span class=m>381</span> KB  
+</span></span><span class=line><span class=cl>  libpoppler-glib8:i386                                                 22.02.0-2ubuntu0.1                                                                                                                 <span class=m>512</span> KB  
+</span></span><span class=line><span class=cl>  libpoppler118:i386                                                    22.02.0-2ubuntu0.1                                                                                                                 3.5 MB  
+</span></span><span class=line><span class=cl>  libpresage-data                                                       0.9.1-2.2ubuntu1                                                                                                                  12.5 MB  
+</span></span><span class=line><span class=cl>  libpresage1v5                                                         0.9.1-2.2ubuntu1                                                                                                                   <span class=m>482</span> KB  
+</span></span><span class=line><span class=cl>  libpsl5:i386                                                          0.21.0-1.2build2                                                                                                                    <span class=m>97</span> KB  
+</span></span><span class=line><span class=cl>  libpulse0:i386                                                        1:15.99.1+dfsg1-1ubuntu2                                                                                                           1.1 MB  
+</span></span><span class=line><span class=cl>  libroken18-heimdal:i386                                               7.7.0+dfsg-3ubuntu1                                                                                                                <span class=m>156</span> KB  
+</span></span><span class=line><span class=cl>  librsvg2-2:i386                                                       2.52.5+dfsg-3                                                                                                                     12.2 MB  
+</span></span><span class=line><span class=cl>  librsvg2-common:i386                                                  2.52.5+dfsg-3                                                                                                                       <span class=m>90</span> KB  
+</span></span><span class=line><span class=cl>  librtmp1:i386                                                         2.4+20151223.gitfa8646d.1-2build4                                                                                                  <span class=m>155</span> KB  
+</span></span><span class=line><span class=cl>  libsamplerate0:i386                                                   0.2.2-1build1                                                                                                                      1.5 MB  
+</span></span><span class=line><span class=cl>  libsdl2-2.0-0:i386                                                    2.0.20+dfsg-2ubuntu1.22.04.1                                                                                                       1.9 MB  
+</span></span><span class=line><span class=cl>  libsensors-dev                                                        1:3.6.0-7ubuntu1                                                                                                                   <span class=m>165</span> KB  
+</span></span><span class=line><span class=cl>  libsensors5:i386                                                      1:3.6.0-7ubuntu1                                                                                                                   <span class=m>101</span> KB  
+</span></span><span class=line><span class=cl>  libsndfile1:i386                                                      1.0.31-2build1                                                                                                                     <span class=m>653</span> KB  
+</span></span><span class=line><span class=cl>  libsndio7.0:i386                                                      1.8.1-1.1                                                                                                                           <span class=m>93</span> KB  
+</span></span><span class=line><span class=cl>  libsnmp-perl                                                          5.9.1+dfsg-1ubuntu2.4                                                                                                              <span class=m>711</span> KB  
+</span></span><span class=line><span class=cl>  libsnmp40:i386                                                        5.9.1+dfsg-1ubuntu2.4                                                                                                              4.5 MB  
+</span></span><span class=line><span class=cl>  libsqlite3-0:i386                                                     3.37.2-2ubuntu0.1                                                                                                                  1.8 MB  
+</span></span><span class=line><span class=cl>  libssh-4:i386                                                         0.9.6-2build1                                                                                                                      <span class=m>578</span> KB  
+</span></span><span class=line><span class=cl>  libstdc++6:i386                                                       12.1.0-2ubuntu1~22.04                                                                                                              2.9 MB  
+</span></span><span class=line><span class=cl>  libtasn1-6:i386                                                       4.18.0-4build1                                                                                                                     <span class=m>131</span> KB  
+</span></span><span class=line><span class=cl>  libthai0:i386                                                         0.1.29-1build1                                                                                                                     <span class=m>104</span> KB  
+</span></span><span class=line><span class=cl>  libtheora0:i386                                                       1.1.1+dfsg.1-15ubuntu4                                                                                                             <span class=m>692</span> KB  
+</span></span><span class=line><span class=cl>  libtiff5:i386                                                         4.3.0-6ubuntu0.3                                                                                                                   <span class=m>621</span> KB  
+</span></span><span class=line><span class=cl>  libtinyxml2.6.2v5                                                     2.6.2-6                                                                                                                            <span class=m>103</span> KB  
+</span></span><span class=line><span class=cl>  libudev-dev                                                           249.11-0ubuntu3.6                                                                                                                  <span class=m>270</span> KB  
+</span></span><span class=line><span class=cl>  libunwind8:i386                                                       1.3.2-2build2                                                                                                                      <span class=m>198</span> KB  
+</span></span><span class=line><span class=cl>  libusb-1.0-0:i386                                                     2:1.0.25-1ubuntu2                                                                                                                  <span class=m>159</span> KB  
+</span></span><span class=line><span class=cl>  libuv1-dev                                                            1.43.0-1                                                                                                                           <span class=m>646</span> KB  
+</span></span><span class=line><span class=cl>  libv4l-0:i386                                                         1.22.1-2build1                                                                                                                     <span class=m>246</span> KB  
+</span></span><span class=line><span class=cl>  libv4lconvert0:i386                                                   1.22.1-2build1                                                                                                                     <span class=m>316</span> KB  
+</span></span><span class=line><span class=cl>  libvisual-0.4-0:i386                                                  0.4.0-17build2                                                                                                                     <span class=m>414</span> KB  
+</span></span><span class=line><span class=cl>  libvkd3d1:i386                                                        1.1-5                                                                                                                              <span class=m>414</span> KB  
+</span></span><span class=line><span class=cl>  libvorbis0a:i386                                                      1.3.7-1build2                                                                                                                      <span class=m>206</span> KB  
+</span></span><span class=line><span class=cl>  libvorbisenc2:i386                                                    1.3.7-1build2                                                                                                                      <span class=m>597</span> KB  
+</span></span><span class=line><span class=cl>  libvulkan1:i386                                                       1.3.204.1-2                                                                                                                        <span class=m>562</span> KB  
+</span></span><span class=line><span class=cl>  libwayland-client0:i386                                               1.20.0-1ubuntu0.1                                                                                                                   <span class=m>82</span> KB  
+</span></span><span class=line><span class=cl>  libwayland-cursor0:i386                                               1.20.0-1ubuntu0.1                                                                                                                   <span class=m>58</span> KB  
+</span></span><span class=line><span class=cl>  libwayland-egl1:i386                                                  1.20.0-1ubuntu0.1                                                                                                                   <span class=m>34</span> KB  
+</span></span><span class=line><span class=cl>  libwayland-server0:i386                                               1.20.0-1ubuntu0.1                                                                                                                  <span class=m>104</span> KB  
+</span></span><span class=line><span class=cl>  libwebp7:i386                                                         1.2.2-2                                                                                                                            <span class=m>506</span> KB  
+</span></span><span class=line><span class=cl>  libwind0-heimdal:i386                                                 7.7.0+dfsg-3ubuntu1                                                                                                                <span class=m>210</span> KB  
+</span></span><span class=line><span class=cl>  libwrap0-dev                                                          7.6.q-31build2                                                                                                                     <span class=m>106</span> KB  
+</span></span><span class=line><span class=cl>  libwrap0:i386                                                         7.6.q-31build2                                                                                                                     <span class=m>111</span> KB  
+</span></span><span class=line><span class=cl>  libx11-6:i386                                                         2:1.7.5-1                                                                                                                          1.5 MB  
+</span></span><span class=line><span class=cl>  libx11-xcb1:i386                                                      2:1.7.5-1                                                                                                                           <span class=m>86</span> KB  
+</span></span><span class=line><span class=cl>  libxau6:i386                                                          1:1.0.9-1build5                                                                                                                     <span class=m>35</span> KB  
+</span></span><span class=line><span class=cl>  libxcb-dri3-0:i386                                                    1.14-3ubuntu3                                                                                                                       <span class=m>42</span> KB  
+</span></span><span class=line><span class=cl>  libxcb-present0:i386                                                  1.14-3ubuntu3                                                                                                                       <span class=m>36</span> KB  
+</span></span><span class=line><span class=cl>  libxcb-randr0:i386                                                    1.14-3ubuntu3                                                                                                                      <span class=m>112</span> KB  
+</span></span><span class=line><span class=cl>  libxcb-render0:i386                                                   1.14-3ubuntu3                                                                                                                       <span class=m>87</span> KB  
+</span></span><span class=line><span class=cl>  libxcb-shm0:i386                                                      1.14-3ubuntu3                                                                                                                       <span class=m>36</span> KB  
+</span></span><span class=line><span class=cl>  libxcb-sync1:i386                                                     1.14-3ubuntu3                                                                                                                       <span class=m>55</span> KB  
+</span></span><span class=line><span class=cl>  libxcb-xfixes0:i386                                                   1.14-3ubuntu3                                                                                                                       <span class=m>65</span> KB  
+</span></span><span class=line><span class=cl>  libxcb1:i386                                                          1.14-3ubuntu3                                                                                                                      <span class=m>226</span> KB  
+</span></span><span class=line><span class=cl>  libxcomposite1:i386                                                   1:0.4.5-1build2                                                                                                                     <span class=m>32</span> KB  
+</span></span><span class=line><span class=cl>  libxcursor1:i386                                                      1:1.2.0-2build4                                                                                                                     <span class=m>68</span> KB  
+</span></span><span class=line><span class=cl>  libxdamage1:i386                                                      1:1.1.5-2build2                                                                                                                     <span class=m>31</span> KB  
+</span></span><span class=line><span class=cl>  libxdmcp6:i386                                                        1:1.1.3-0ubuntu5                                                                                                                    <span class=m>43</span> KB  
+</span></span><span class=line><span class=cl>  libxext6:i386                                                         2:1.3.4-1build1                                                                                                                    <span class=m>120</span> KB  
+</span></span><span class=line><span class=cl>  libxfixes3:i386                                                       1:6.0.0-1                                                                                                                           <span class=m>51</span> KB  
+</span></span><span class=line><span class=cl>  libxi6:i386                                                           2:1.8-1build1                                                                                                                      <span class=m>105</span> KB  
+</span></span><span class=line><span class=cl>  libxinerama1:i386                                                     2:1.1.4-3                                                                                                                           <span class=m>37</span> KB  
+</span></span><span class=line><span class=cl>  libxkbcommon0:i386                                                    1.4.0-1                                                                                                                            <span class=m>321</span> KB  
+</span></span><span class=line><span class=cl>  libxml2:i386                                                          2.9.13+dfsg-1ubuntu0.2                                                                                                             2.1 MB  
+</span></span><span class=line><span class=cl>  libxpm4:i386                                                          1:3.5.12-1ubuntu0.22.04.1                                                                                                          <span class=m>103</span> KB  
+</span></span><span class=line><span class=cl>  libxrandr2:i386                                                       2:1.5.2-1build1                                                                                                                     <span class=m>78</span> KB  
+</span></span><span class=line><span class=cl>  libxrender1:i386                                                      1:0.9.10-1build4                                                                                                                    <span class=m>73</span> KB  
+</span></span><span class=line><span class=cl>  libxshmfence1:i386                                                    1.3-1build4                                                                                                                         <span class=m>30</span> KB  
+</span></span><span class=line><span class=cl>  libxslt1.1:i386                                                       1.1.34-4ubuntu0.22.04.1                                                                                                            <span class=m>554</span> KB  
+</span></span><span class=line><span class=cl>  libxss1:i386                                                          1:1.2.3-1build2                                                                                                                     <span class=m>37</span> KB  
+</span></span><span class=line><span class=cl>  libxxf86vm1:i386                                                      1:1.1.4-1build3                                                                                                                     <span class=m>43</span> KB  
+</span></span><span class=line><span class=cl>  mesa-vulkan-drivers:i386                                              22.2.5-0ubuntu0.1~22.04.1                                                                                                         25.5 MB  
+</span></span><span class=line><span class=cl>  mysql-common                                                          5.8+1.0.8                                                                                                                           <span class=m>35</span> KB  
+</span></span><span class=line><span class=cl>  node-abbrev                                                           1.1.1+~1.1.2-1                                                                                                                      <span class=m>22</span> KB  
+</span></span><span class=line><span class=cl>  node-ansi-regex                                                       5.0.1-1                                                                                                                             <span class=m>17</span> KB  
+</span></span><span class=line><span class=cl>  node-ansi-styles                                                      4.3.0+~4.2.0-1                                                                                                                      <span class=m>32</span> KB  
+</span></span><span class=line><span class=cl>  node-ansistyles                                                       0.1.3-5                                                                                                                             <span class=m>16</span> KB  
+</span></span><span class=line><span class=cl>  node-are-we-there-yet                                                 3.0.0+~1.1.0-1                                                                                                                      <span class=m>35</span> KB  
+</span></span><span class=line><span class=cl>  node-arrify                                                           2.0.1-2                                                                                                                             <span class=m>15</span> KB  
+</span></span><span class=line><span class=cl>  node-asap                                                             2.0.6+~2.0.0-1                                                                                                                      <span class=m>44</span> KB  
+</span></span><span class=line><span class=cl>  node-asynckit                                                         0.4.0-4                                                                                                                             <span class=m>42</span> KB  
+</span></span><span class=line><span class=cl>  node-balanced-match                                                   2.0.0-1                                                                                                                             <span class=m>22</span> KB  
+</span></span><span class=line><span class=cl>  node-brace-expansion                                                  2.0.1-1                                                                                                                             <span class=m>23</span> KB  
+</span></span><span class=line><span class=cl>  node-chownr                                                           2.0.0-1                                                                                                                             <span class=m>18</span> KB  
+</span></span><span class=line><span class=cl>  node-clean-yaml-object                                                0.1.0-5                                                                                                                             <span class=m>17</span> KB  
+</span></span><span class=line><span class=cl>  node-color-convert                                                    2.0.1-1                                                                                                                             <span class=m>38</span> KB  
+</span></span><span class=line><span class=cl>  node-color-name                                                       1.1.4+~1.1.1-2                                                                                                                      <span class=m>27</span> KB  
+</span></span><span class=line><span class=cl>  node-commander                                                        9.0.0-2                                                                                                                            <span class=m>204</span> KB  
+</span></span><span class=line><span class=cl>  node-core-util-is                                                     1.0.3-1                                                                                                                             <span class=m>17</span> KB  
+</span></span><span class=line><span class=cl>  node-decompress-response                                              6.0.0-2                                                                                                                             <span class=m>17</span> KB  
+</span></span><span class=line><span class=cl>  node-delayed-stream                                                   1.0.0-5                                                                                                                             <span class=m>20</span> KB  
+</span></span><span class=line><span class=cl>  node-delegates                                                        1.0.0-3                                                                                                                             <span class=m>19</span> KB  
+</span></span><span class=line><span class=cl>  node-depd                                                             2.0.0-2                                                                                                                             <span class=m>35</span> KB  
+</span></span><span class=line><span class=cl>  node-diff                                                             5.0.0~dfsg+~5.0.1-3                                                                                                                <span class=m>425</span> KB  
+</span></span><span class=line><span class=cl>  node-encoding                                                         0.1.13-2                                                                                                                            <span class=m>18</span> KB  
+</span></span><span class=line><span class=cl>  node-end-of-stream                                                    1.4.4+~1.4.1-1                                                                                                                      <span class=m>22</span> KB  
+</span></span><span class=line><span class=cl>  node-err-code                                                         2.0.3+dfsg-3                                                                                                                        <span class=m>19</span> KB  
+</span></span><span class=line><span class=cl>  node-escape-string-regexp                                             4.0.0-2                                                                                                                             <span class=m>16</span> KB  
+</span></span><span class=line><span class=cl>  node-fancy-log                                                        1.3.3+~cs1.3.1-2                                                                                                                    <span class=m>41</span> KB  
+</span></span><span class=line><span class=cl>  node-foreground-child                                                 2.0.0-3                                                                                                                             <span class=m>19</span> KB  
+</span></span><span class=line><span class=cl>  node-fs.realpath                                                      1.0.0-2                                                                                                                             <span class=m>26</span> KB  
+</span></span><span class=line><span class=cl>  node-function-bind                                                    1.1.1+repacked+~1.0.3-1                                                                                                             <span class=m>29</span> KB  
+</span></span><span class=line><span class=cl>  node-get-stream                                                       6.0.1-1                                                                                                                             <span class=m>22</span> KB  
+</span></span><span class=line><span class=cl>  node-glob                                                             7.2.1+~cs7.6.15-1                                                                                                                  <span class=m>224</span> KB  
+</span></span><span class=line><span class=cl>  node-growl                                                            1.10.5-4                                                                                                                            <span class=m>27</span> KB  
+</span></span><span class=line><span class=cl>  node-has-flag                                                         4.0.0-2                                                                                                                             <span class=m>16</span> KB  
+</span></span><span class=line><span class=cl>  node-has-unicode                                                      2.0.1-4                                                                                                                             <span class=m>15</span> KB  
+</span></span><span class=line><span class=cl>  node-hosted-git-info                                                  4.0.2-1                                                                                                                             <span class=m>34</span> KB  
+</span></span><span class=line><span class=cl>  node-iconv-lite                                                       0.6.3-2                                                                                                                            <span class=m>365</span> KB  
+</span></span><span class=line><span class=cl>  node-iferr                                                            1.0.2+~1.0.2-1                                                                                                                      <span class=m>19</span> KB  
+</span></span><span class=line><span class=cl>  node-imurmurhash                                                      0.1.4+dfsg+~0.1.1-1                                                                                                                 <span class=m>29</span> KB  
+</span></span><span class=line><span class=cl>  node-indent-string                                                    4.0.0-2                                                                                                                             <span class=m>16</span> KB  
+</span></span><span class=line><span class=cl>  node-inflight                                                         1.0.6-2                                                                                                                             <span class=m>15</span> KB  
+</span></span><span class=line><span class=cl>  node-inherits                                                         2.0.4-4                                                                                                                             <span class=m>16</span> KB  
+</span></span><span class=line><span class=cl>  node-ini                                                              2.0.1-1                                                                                                                             <span class=m>23</span> KB  
+</span></span><span class=line><span class=cl>  node-ip                                                               1.1.5+~1.1.0-1                                                                                                                      <span class=m>35</span> KB  
+</span></span><span class=line><span class=cl>  node-ip-regex                                                         4.3.0+~4.1.1-1                                                                                                                      <span class=m>23</span> KB  
+</span></span><span class=line><span class=cl>  node-is-buffer                                                        2.0.5-2                                                                                                                             <span class=m>17</span> KB  
+</span></span><span class=line><span class=cl>  node-is-plain-obj                                                     3.0.0-2                                                                                                                             <span class=m>16</span> KB  
+</span></span><span class=line><span class=cl>  node-is-typedarray                                                    1.0.0-4                                                                                                                             <span class=m>13</span> KB  
+</span></span><span class=line><span class=cl>  node-isarray                                                          2.0.5-3                                                                                                                             <span class=m>15</span> KB  
+</span></span><span class=line><span class=cl>  node-isexe                                                            2.0.0+~2.0.1-4                                                                                                                      <span class=m>25</span> KB  
+</span></span><span class=line><span class=cl>  node-json-parse-better-errors                                         1.0.2+~cs3.3.1-1                                                                                                                    <span class=m>29</span> KB  
+</span></span><span class=line><span class=cl>  node-jsonparse                                                        1.3.1-10                                                                                                                            <span class=m>43</span> KB  
+</span></span><span class=line><span class=cl>  node-kind-of                                                          6.0.3+dfsg-2                                                                                                                        <span class=m>22</span> KB  
+</span></span><span class=line><span class=cl>  node-lodash-packages                                                  4.17.21+dfsg+~cs8.31.198.20210220-5                                                                                               10.1 MB  
+</span></span><span class=line><span class=cl>  node-lowercase-keys                                                   2.0.0-2                                                                                                                             <span class=m>15</span> KB  
+</span></span><span class=line><span class=cl>  node-lru-cache                                                        6.0.0+~5.1.1-1                                                                                                                      <span class=m>36</span> KB  
+</span></span><span class=line><span class=cl>  node-mimic-response                                                   3.1.0-7                                                                                                                             <span class=m>20</span> KB  
+</span></span><span class=line><span class=cl>  node-minimatch                                                        3.1.1+~3.0.5-1                                                                                                                      <span class=m>53</span> KB  
+</span></span><span class=line><span class=cl>  node-minimist                                                         1.2.5+~cs5.3.2-1                                                                                                                    <span class=m>41</span> KB  
+</span></span><span class=line><span class=cl>  node-minipass                                                         3.1.6+~cs8.7.18-1                                                                                                                  <span class=m>127</span> KB  
+</span></span><span class=line><span class=cl>  node-mute-stream                                                      0.0.8+~0.0.1-1                                                                                                                      <span class=m>26</span> KB  
+</span></span><span class=line><span class=cl>  node-negotiator                                                       0.6.2+~0.6.1-1                                                                                                                      <span class=m>53</span> KB  
+</span></span><span class=line><span class=cl>  node-npm-bundled                                                      1.1.2-1                                                                                                                             <span class=m>27</span> KB  
+</span></span><span class=line><span class=cl>  node-once                                                             1.4.0-4                                                                                                                             <span class=m>16</span> KB  
+</span></span><span class=line><span class=cl>  node-osenv                                                            0.1.5+~0.1.0-1                                                                                                                      <span class=m>23</span> KB  
+</span></span><span class=line><span class=cl>  node-p-cancelable                                                     2.1.1-1                                                                                                                             <span class=m>23</span> KB  
+</span></span><span class=line><span class=cl>  node-p-map                                                            4.0.0+~3.1.0+~3.0.1-1                                                                                                               <span class=m>32</span> KB  
+</span></span><span class=line><span class=cl>  node-path-is-absolute                                                 2.0.0-2                                                                                                                             <span class=m>15</span> KB  
+</span></span><span class=line><span class=cl>  node-process-nextick-args                                             2.0.1-2                                                                                                                             <span class=m>15</span> KB  
+</span></span><span class=line><span class=cl>  node-promise-inflight                                                 1.0.1+~1.0.0-1                                                                                                                      <span class=m>19</span> KB  
+</span></span><span class=line><span class=cl>  node-promise-retry                                                    2.0.1-2                                                                                                                             <span class=m>18</span> KB  
+</span></span><span class=line><span class=cl>  node-promzard                                                         0.3.0-2                                                                                                                             <span class=m>20</span> KB  
+</span></span><span class=line><span class=cl>  node-pump                                                             3.0.0-5                                                                                                                             <span class=m>18</span> KB  
+</span></span><span class=line><span class=cl>  node-quick-lru                                                        5.1.1-1                                                                                                                             <span class=m>22</span> KB  
+</span></span><span class=line><span class=cl>  node-read                                                             1.0.7-3                                                                                                                             <span class=m>20</span> KB  
+</span></span><span class=line><span class=cl>  node-readable-stream                                                  3.6.0+~cs3.0.0-1                                                                                                                   <span class=m>153</span> KB  
+</span></span><span class=line><span class=cl>  node-resolve                                                          1.20.0+~cs5.27.9-1                                                                                                                 <span class=m>124</span> KB  
+</span></span><span class=line><span class=cl>  node-retry                                                            0.13.1+~0.12.1-1                                                                                                                    <span class=m>40</span> KB  
+</span></span><span class=line><span class=cl>  node-safe-buffer                                                      5.2.1+~cs2.1.2-2                                                                                                                    <span class=m>54</span> KB  
+</span></span><span class=line><span class=cl>  node-set-blocking                                                     2.0.0-2                                                                                                                             <span class=m>15</span> KB  
+</span></span><span class=line><span class=cl>  node-signal-exit                                                      3.0.6+~3.0.1-1                                                                                                                      <span class=m>28</span> KB  
+</span></span><span class=line><span class=cl>  node-slash                                                            3.0.0-2                                                                                                                             <span class=m>15</span> KB  
+</span></span><span class=line><span class=cl>  node-slice-ansi                                                       5.0.0+~cs9.0.0-4                                                                                                                    <span class=m>32</span> KB  
+</span></span><span class=line><span class=cl>  node-source-map                                                       0.7.0++dfsg2+really.0.6.1-9                                                                                                        <span class=m>141</span> KB  
+</span></span><span class=line><span class=cl>  node-spdx-correct                                                     3.1.1-2                                                                                                                             <span class=m>25</span> KB  
+</span></span><span class=line><span class=cl>  node-spdx-exceptions                                                  2.3.0-2                                                                                                                             <span class=m>15</span> KB  
+</span></span><span class=line><span class=cl>  node-spdx-expression-parse                                            3.0.1+~3.0.1-1                                                                                                                      <span class=m>31</span> KB  
+</span></span><span class=line><span class=cl>  node-spdx-license-ids                                                 3.0.11-1                                                                                                                            <span class=m>28</span> KB  
+</span></span><span class=line><span class=cl>  node-sprintf-js                                                       1.1.2+ds1+~1.1.2-1                                                                                                                  <span class=m>30</span> KB  
+</span></span><span class=line><span class=cl>  node-stealthy-require                                                 1.1.1-5                                                                                                                             <span class=m>20</span> KB  
+</span></span><span class=line><span class=cl>  node-string-decoder                                                   1.3.0-5                                                                                                                             <span class=m>27</span> KB  
+</span></span><span class=line><span class=cl>  node-supports-color                                                   8.1.1+~8.1.1-1                                                                                                                      <span class=m>27</span> KB  
+</span></span><span class=line><span class=cl>  node-text-table                                                       0.2.0-4                                                                                                                             <span class=m>19</span> KB  
+</span></span><span class=line><span class=cl>  node-time-stamp                                                       2.2.0-1                                                                                                                             <span class=m>18</span> KB  
+</span></span><span class=line><span class=cl>  node-tmatch                                                           5.0.0-4                                                                                                                             <span class=m>22</span> KB  
+</span></span><span class=line><span class=cl>  node-typedarray-to-buffer                                             4.0.0-2                                                                                                                             <span class=m>14</span> KB  
+</span></span><span class=line><span class=cl>  node-universalify                                                     2.0.0-3                                                                                                                             <span class=m>15</span> KB  
+</span></span><span class=line><span class=cl>  node-util-deprecate                                                   1.0.2-3                                                                                                                             <span class=m>19</span> KB  
+</span></span><span class=line><span class=cl>  node-validate-npm-package-license                                     3.0.4-2                                                                                                                             <span class=m>17</span> KB  
+</span></span><span class=line><span class=cl>  node-webidl-conversions                                               7.0.0~1.1.0+~cs15.1.20180823-2                                                                                                      <span class=m>94</span> KB  
+</span></span><span class=line><span class=cl>  node-whatwg-fetch                                                     3.6.2-5                                                                                                                             <span class=m>62</span> KB  
+</span></span><span class=line><span class=cl>  node-wrappy                                                           1.0.2-2                                                                                                                             <span class=m>14</span> KB  
+</span></span><span class=line><span class=cl>  node-yallist                                                          4.0.0+~4.0.1-1                                                                                                                      <span class=m>32</span> KB  
+</span></span><span class=line><span class=cl>  ocl-icd-libopencl1:i386                                               2.2.14-3                                                                                                                           <span class=m>155</span> KB  
+</span></span><span class=line><span class=cl>  presage                                                               0.9.1-2.2ubuntu1                                                                                                                   <span class=m>248</span> KB  
+</span></span><span class=line><span class=cl>  python3-asgiref                                                       3.5.0-1                                                                                                                             <span class=m>93</span> KB  
+</span></span><span class=line><span class=cl>  python3-cliapp                                                        1.20180812.1-4                                                                                                                     <span class=m>207</span> KB  
+</span></span><span class=line><span class=cl>  python3-sqlparse                                                      0.4.2-1                                                                                                                            <span class=m>161</span> KB  
+</span></span><span class=line><span class=cl>  python3-ttystatus                                                     0.38-4                                                                                                                             <span class=m>112</span> KB  
+</span></span><span class=line><span class=cl>  udis86:i386                                                           1.72-4                                                                                                                             <span class=m>428</span> <span class=nv>KB</span>  
+</span></span><span class=line><span class=cl>                                                                                                                                                                                                                   
+</span></span><span class=line><span class=cl><span class=o>===================================================================================================================================================================================================================</span>
+</span></span><span class=line><span class=cl> <span class=nv>Installing</span>                                                                                                                                                                                                        
+</span></span><span class=line><span class=cl><span class=o>===================================================================================================================================================================================================================</span>
+</span></span><span class=line><span class=cl>  Package:                                                              Version:                                                                                                                            Size:  
+</span></span><span class=line><span class=cl>  keepassxc                                                             2.7.4-1ppa2~jammy1                                                                                                                 7.3 MB  
+</span></span><span class=line><span class=cl>  libbotan-2-19                                                         2.19.1+dfsg-2ubuntu1                                                                                                               1.6 MB  
+</span></span><span class=line><span class=cl>  libtspi1                                                              0.3.15-0.2                                                                                                                         <span class=m>160</span> KB  
+</span></span><span class=line><span class=cl>  libzxcvbn0                                                            2.4+dfsg-2                                                                                                                         <span class=m>859</span> <span class=nv>KB</span>  
+</span></span><span class=line><span class=cl>                                                                                                                                                                                                                   
+</span></span><span class=line><span class=cl><span class=o>===================================================================================================================================================================================================================</span>
+</span></span><span class=line><span class=cl> <span class=nv>Summary</span>                                                                                                                                                                                                           
+</span></span><span class=line><span class=cl><span class=o>===================================================================================================================================================================================================================</span>
+</span></span><span class=line><span class=cl> Install <span class=m>4</span> Packages                                                                                                                                                                                                
+</span></span><span class=line><span class=cl>                                                                                                                                                                                                                   
+</span></span><span class=line><span class=cl> Total download size   9.9 MB   
+</span></span><span class=line><span class=cl> Disk space required  35.6 MB   
+</span></span><span class=line><span class=cl>                                
+</span></span><span class=line><span class=cl>Do you want to <span class=k>continue</span>? <span class=o>[</span>Y/n<span class=o>]</span> y
+</span></span><span class=line><span class=cl>╭─ Downloading… ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+</span></span><span class=line><span class=cl>│ Total Packages: 4/4                                                                                                                                                                                             │
+</span></span><span class=line><span class=cl>│ Last Completed: keepassxc_2.7.4-1ppa2~jammy1_amd64.deb                                                                                                                                                          │
+</span></span><span class=line><span class=cl>│ Time Remaining: 0:00:00 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.0% • 9.9/9.9 MB • 2.8 MB/s │
+</span></span><span class=line><span class=cl>╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+</span></span><span class=line><span class=cl>╭─ Installing Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+</span></span><span class=line><span class=cl>│准备解压 /libbotan-2-19_2.19.1+dfsg-2ubuntu1_amd64.deb                                                                                                                                                           │
+</span></span><span class=line><span class=cl>│正在解压 libbotan-2-19:amd64 <span class=o>(</span>2.19.1+dfsg-2ubuntu1<span class=o>)</span>                                                                                                                                                              │
+</span></span><span class=line><span class=cl>│正在选中未选择的软件包 libzxcvbn0:amd64。                                                                                                                                                                        │
+</span></span><span class=line><span class=cl>│准备解压 /libzxcvbn0_2.4+dfsg-2_amd64.deb                                                                                                                                                                        │
+</span></span><span class=line><span class=cl>│正在解压 libzxcvbn0:amd64 <span class=o>(</span>2.4+dfsg-2<span class=o>)</span>                                                                                                                                                                           │
+</span></span><span class=line><span class=cl>│正在选中未选择的软件包 keepassxc。                                                                                                                                                                               │
+</span></span><span class=line><span class=cl>│准备解压 /keepassxc_2.7.4-1ppa2~jammy1_amd64.deb                                                                                                                                                                 │
+</span></span><span class=line><span class=cl>│正在解压 keepassxc <span class=o>(</span>2.7.4-1ppa2~jammy1<span class=o>)</span>                                                                                                                                                                          │
+</span></span><span class=line><span class=cl>│正在设置 libtspi1 <span class=o>(</span>0.3.15-0.2<span class=o>)</span>                                                                                                                                                                                   │
+</span></span><span class=line><span class=cl>│正在设置 libzxcvbn0:amd64 <span class=o>(</span>2.4+dfsg-2<span class=o>)</span>                                                                                                                                                                           │
+</span></span><span class=line><span class=cl>│正在设置 libbotan-2-19:amd64 <span class=o>(</span>2.19.1+dfsg-2ubuntu1<span class=o>)</span>                                                                                                                                                              │
+</span></span><span class=line><span class=cl>│正在设置 keepassxc <span class=o>(</span>2.7.4-1ppa2~jammy1<span class=o>)</span>                                                                                                                                                                          │
+</span></span><span class=line><span class=cl>│正在处理用于 mailcap <span class=o>(</span>3.70+nmu1ubuntu1<span class=o>)</span> 的触发器                                                                                                                                                                 │
+</span></span><span class=line><span class=cl>│正在处理用于 desktop-file-utils <span class=o>(</span>0.26-1ubuntu3<span class=o>)</span> 的触发器                                                                                                                                                         │
+</span></span><span class=line><span class=cl>│正在处理用于 hicolor-icon-theme <span class=o>(</span>0.17-2<span class=o>)</span> 的触发器                                                                                                                                                                │
+</span></span><span class=line><span class=cl>│正在处理用于 gnome-menus <span class=o>(</span>3.36.0-1ubuntu3<span class=o>)</span> 的触发器                                                                                                                                                              │
+</span></span><span class=line><span class=cl>│正在处理用于 libc-bin <span class=o>(</span>2.35-0ubuntu3.1<span class=o>)</span> 的触发器                                                                                                                                                                 │
+</span></span><span class=line><span class=cl>│正在处理用于 man-db <span class=o>(</span>2.10.2-1<span class=o>)</span> 的触发器                                                                                                                                                                          │
+</span></span><span class=line><span class=cl>│正在处理用于 shared-mime-info <span class=o>(</span>2.1-2<span class=o>)</span> 的触发器                                                                                                                                                                   │
+</span></span><span class=line><span class=cl>│╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮│
+</span></span><span class=line><span class=cl>││✔ Running dpkg … ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.0% • 0:00:00 • 9/9││
+</span></span><span class=line><span class=cl>│╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯│
+</span></span><span class=line><span class=cl>╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+</span></span><span class=line><span class=cl>Finished Successfully
+</span></span></code></pre></td></tr></table></div></div></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span title="2023-03-01 17:56:53">Updated on 2023-03-01&nbsp;</span></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href=javascript:void(0); title="Share on Twitter" data-sharer=twitter data-url=http://qq516249940.github.io/posts/ubuntu%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7nala/ data-title=Ubuntu包管理工具nala data-hashtags=ubuntu><i class="fa-brands fa-twitter fa-fw" aria-hidden=true></i></a>
+<a href=javascript:void(0); title="Share on Facebook" data-sharer=facebook data-url=http://qq516249940.github.io/posts/ubuntu%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7nala/ data-hashtag=ubuntu><i class="fa-brands fa-facebook-square fa-fw" aria-hidden=true></i></a>
+<a href=javascript:void(0); title="Share on 微博" data-sharer=weibo data-url=http://qq516249940.github.io/posts/ubuntu%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7nala/ data-title=Ubuntu包管理工具nala><i class="fa-brands fa-weibo fa-fw" aria-hidden=true></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fa-solid fa-tags fa-fw me-1" aria-hidden=true></i><a href=/tags/ubuntu/ class=post-tag>ubuntu</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>Back</a></span>&nbsp;|&nbsp;<span><a href=/>Home</a></span></section></div><div class=post-nav><a href=/posts/golang%E6%9E%84%E5%BB%BA%E5%9F%BA%E4%BA%8Etag/ class=post-nav-item rel=prev title="Golang构建基于tag(Gopher Guides NO.1构建标签)"><i class="fa-solid fa-angle-left fa-fw" aria-hidden=true></i>Golang构建基于tag(Gopher Guides NO.1构建标签)</a>
+<a href=/posts/pipx%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/ class=post-nav-item rel=next title=Pipx包管理工具>Pipx包管理工具<i class="fa-solid fa-angle-right fa-fw" aria-hidden=true></i></a></div></div></article></main><footer class=footer><div class=footer-container><div class="footer-line powered">Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow noopener noreferrer" title="Hugo 0.110.0">Hugo</a> | Theme - <a href=https://github.com/hugo-fixit/FixIt target=_blank rel=external title="FixIt v0.2.18-RC"><img class=fixit-icon src=/fixit.min.svg alt="FixIt logo">&nbsp;FixIt</a></div><div class="footer-line copyright" itemscope itemtype=http://schema.org/CreativeWork><i class="fa-regular fa-copyright fa-fw" aria-hidden=true></i>
+<span itemprop=copyrightYear>2021 - 2023</span><span class=author itemprop=copyrightHolder>
+<a href=/></a></span><span class="license footer-divider"><a rel="license external nofollow noopener noreferrer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div><div class="footer-line statistics"></div></div></footer></div><div class=widgets><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role=button aria-label="Back to Top"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden=true></i><span class="variant-numeric d-none">0%</span></div></div><div id=mask></div><noscript><div class=noscript-warning>Theme FixIt works best with JavaScript enabled.</div></noscript></div><link rel=stylesheet href=/lib/cookieconsent/cookieconsent.min.css><script src=/lib/autocomplete/autocomplete.min.js defer></script><script src=/lib/fuse/fuse.min.js defer></script><script src=/lib/sharer/sharer.min.js async defer></script><script src=/lib/typeit/index.umd.js defer></script><script src=/lib/cookieconsent/cookieconsent.min.js defer></script><script>window.config={code:{copyTitle:"Copy to clipboard",editLockTitle:"Lock editable code block",editUnLockTitle:"Unlock editable code block",editable:!0,maxShownLines:10},comment:{enable:!1},cookieconsent:{content:{dismiss:"Got it!",link:"Learn more",message:"This website uses Cookies to improve your experience."},enable:!0,palette:{button:{background:"#f0f0f0"},popup:{background:"#1aa3ff"}},theme:"edgeless"},data:{"typeit-header-subtitle-desktop":"789","typeit-header-subtitle-mobile":"789"},search:{distance:100,findAllMatches:!1,fuseIndexURL:"/index.json",highlightTag:"em",ignoreFieldNorm:!1,ignoreLocation:!1,isCaseSensitive:!1,location:0,maxResultLength:10,minMatchCharLength:2,noResultsFound:"No results found",snippetLength:50,threshold:.3,type:"fuse",useExtendedSearch:!1},typeit:{cursorChar:"|",cursorSpeed:1e3,data:{"typeit-header-subtitle-desktop":["typeit-header-subtitle-desktop"],"typeit-header-subtitle-mobile":["typeit-header-subtitle-mobile"]},duration:-1,speed:100}}</script><script src=/js/theme.min.js defer></script></body></html>
