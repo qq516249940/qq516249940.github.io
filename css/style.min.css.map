@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.min.css",
-	"sourceRoot": "/home/chunk/code/github/quickstart",
+	"sourceRoot": "/home/runner/work/myhugoblog/myhugoblog",
 	"sources": [
 		"themes/FixIt/assets/css/style.scss",
 		"themes/FixIt/assets/css/_variables.scss",

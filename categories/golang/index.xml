@@ -1,27 +1,5 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-  <channel>
-    <title>golang - Category - 熊仔家族</title>
-    <link>http://qq516249940.github.io/categories/golang/</link>
-    <description>golang - Category - 熊仔家族</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 07 Mar 2023 15:25:49 &#43;0800</lastBuildDate><atom:link href="http://qq516249940.github.io/categories/golang/" rel="self" type="application/rss+xml" /><item>
-  <title>文件传输工具croc</title>
-  <link>http://qq516249940.github.io/posts/golang/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%B7%A5%E5%85%B7croc/</link>
-  <pubDate>Tue, 07 Mar 2023 15:25:49 &#43;0800</pubDate>
-  <author>Author</author>
-  <guid>http://qq516249940.github.io/posts/golang/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%B7%A5%E5%85%B7croc/</guid>
-  <description><![CDATA[简介 croc是一种允许任何两台计算机简单安全地传输文件和文件夹的工具。据我所知，croc是唯一可以执行以下所有操作的CLI 文件传输工具：
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>golang - Category - 熊仔家族</title><link>http://qq516249940.github.io/categories/golang/</link><description>golang - Category - 熊仔家族</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 07 Mar 2023 15:25:49 +0800</lastBuildDate><atom:link href="http://qq516249940.github.io/categories/golang/" rel="self" type="application/rss+xml"/><item><title>文件传输工具croc</title><link>http://qq516249940.github.io/posts/golang/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%B7%A5%E5%85%B7croc/</link><pubDate>Tue, 07 Mar 2023 15:25:49 +0800</pubDate><author>Author</author><guid>http://qq516249940.github.io/posts/golang/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%B7%A5%E5%85%B7croc/</guid><description><![CDATA[简介 croc是一种允许任何两台计算机简单安全地传输文件和文件夹的工具。据我所知，croc是唯一可以执行以下所有操作的CLI 文件传输工具：
 允许任何两台计算机传输数据（使用中继服务器） 提供端到端加密（使用 PAKE） 实现轻松的跨平台传输（Windows、Linux、Mac） 允许多个文件传输 允许恢复被中断的传输 不需要本地服务器或端口转发 ipv6-first和 ipv4 后备 可以使用代理，比如tor
 安装 1 go install github.com/schollz/croc/v9@latest 使用 1 2 3 4 # send croc send --code code-phrase [file(s)-or-folder] # receive croc code-phrase send : 表示发送
 &ndash;code：指定传输和接收的code(不小于6个字符)，用于建立密码验证密钥协议 ( PAKE[3] ），也可以不带此选项会自动生成code。
-croc 发送 1 2 3 4 5 6 7 8 9 $croc send --code 123456 zshrc Sending &#39;zshrc&#39; (3.9 kB) Code is: 123456 On the other computer run croc 123456 Sending (-&gt;192.]]></description>
-</item>
-<item>
-  <title>Golang构建基于tag(Gopher Guides NO.1构建标签)</title>
-  <link>http://qq516249940.github.io/posts/golang%E6%9E%84%E5%BB%BA%E5%9F%BA%E4%BA%8Etag/</link>
-  <pubDate>Wed, 01 Mar 2023 14:35:19 &#43;0800</pubDate>
-  <author>chunk</author>
-  <guid>http://qq516249940.github.io/posts/golang%E6%9E%84%E5%BB%BA%E5%9F%BA%E4%BA%8Etag/</guid>
-  <description><![CDATA[123]]></description>
-</item>
-</channel>
-</rss>
+croc 发送 1 2 3 4 5 6 7 8 9 $croc send --code 123456 zshrc Sending &#39;zshrc&#39; (3.9 kB) Code is: 123456 On the other computer run croc 123456 Sending (-&gt;192.]]></description></item><item><title>Golang构建基于tag(Gopher Guides NO.1构建标签)</title><link>http://qq516249940.github.io/posts/golang%E6%9E%84%E5%BB%BA%E5%9F%BA%E4%BA%8Etag/</link><pubDate>Wed, 01 Mar 2023 14:35:19 +0800</pubDate><author>chunk</author><guid>http://qq516249940.github.io/posts/golang%E6%9E%84%E5%BB%BA%E5%9F%BA%E4%BA%8Etag/</guid><description>123</description></item></channel></rss>
